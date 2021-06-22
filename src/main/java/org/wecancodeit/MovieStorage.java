@@ -8,6 +8,10 @@ public class MovieStorage {
 
     private MovieRepository movieRepository;
 
+    public Movie retrieveMovieByTitle(String title){
+        return movieRepository.findByTitle(title);
+    }
+
     public MovieStorage(MovieRepository movieRepository) {
         this.movieRepository = movieRepository;
     }
