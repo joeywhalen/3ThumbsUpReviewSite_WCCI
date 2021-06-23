@@ -128,6 +128,11 @@ a:active {
   color: white;
 }
 
+.genre-title h2 {
+  font-family: 'Limelight', cursive;
+  color: white;
+}
+
 .main-content-container {
   background-color: khaki;
   display: grid;
@@ -148,6 +153,16 @@ a:active {
 
 .main-content>div {
   grid-column: auto;
+}
+
+.review-poster img {
+  max-width: 300px;
+  height: auto;
+}
+
+.review-stars img {
+  max-width: 300px;
+  height: auto;
 }
 
 /* -------------------------------------- */
