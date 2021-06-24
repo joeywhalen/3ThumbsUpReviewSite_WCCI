@@ -237,6 +237,18 @@ a.movie-link:hover {
   justify-content: space-evenly;
 }
 
+.movie-title {
+  display: flex;
+}
+
+.media {
+  display: flex;
+}
+
+.movie-info {
+  display: flex;
+}
+
 .review-poster img {
   max-width: 300px;
   height: auto;
