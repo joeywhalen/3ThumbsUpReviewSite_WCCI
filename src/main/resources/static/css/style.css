@@ -253,6 +253,28 @@ a.movie-link:hover {
 }
 
 .movie-info {
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  align-content: space-between;
+}
+
+.mpaa-rating {
+  padding-left: 150px;
+}
+
+.good-date {
+  padding-left: 150px;
+}
+
+.movie-text {
+  padding-top: 20px;
+  font-family: 'Lato','Arial', sans-serif;
+  color: darkred;
+}
+
+.review-stars {
+  padding-top: 20px;
   display: flex;
   align-items: flex-end;
 }
