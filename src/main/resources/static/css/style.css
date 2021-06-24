@@ -241,6 +241,12 @@ a.movie-link:hover {
   display: flex;
 }
 
+.movie-title h1 {
+  /* color: white; */
+  color: darkred;
+  font-family: "Limelight", cursive;
+}
+
 .media {
   display: flex;
   align-items: flex-end;
@@ -248,6 +254,7 @@ a.movie-link:hover {
 
 .movie-info {
   display: flex;
+  align-items: flex-end;
 }
 
 .review-poster {
