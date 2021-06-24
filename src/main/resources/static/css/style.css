@@ -243,15 +243,22 @@ a.movie-link:hover {
 
 .media {
   display: flex;
+  align-items: flex-end;
 }
 
 .movie-info {
   display: flex;
 }
 
+.review-poster {
+  padding-right: 15px;
+}
+
 .review-poster img {
-  max-width: 300px;
-  height: auto;
+  max-height: 315px;
+  /* max-width: 300px; */
+  width:auto;
+  /* height: auto; */
 }
 
 .review-stars img {
