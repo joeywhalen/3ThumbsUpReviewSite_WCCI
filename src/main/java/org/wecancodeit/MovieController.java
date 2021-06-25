@@ -1,13 +1,16 @@
 package org.wecancodeit;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.wecancodeit.repository.MovieRepository;
+@Controller
 
 public class MovieController {
 
     private MovieStorage movieStorage;
-    public MovieController(MovieStorage movieStorage) {this.movieStorage = movieStorage; }
+    public MovieController(MovieRepository movieRepository) {this.movieStorage = movieStorage; }
 
     @RequestMapping("/movies")
     public String displayAllMovies(Model model){
