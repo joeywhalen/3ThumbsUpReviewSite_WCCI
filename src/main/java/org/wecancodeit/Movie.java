@@ -1,9 +1,6 @@
 package org.wecancodeit;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -14,11 +11,14 @@ public class Movie {
     private Long id;
 
     private String title;
+    @Lob
     private String posterUrl;
+    @Lob
     private String trailerUrl;
     private int releaseDate;
     private String mpaaRating;
     private boolean dateMovie;
+    @Lob
     private String description;
     private int starRating;
 
