@@ -8,12 +8,11 @@ public class GenreStorage {
 
     private GenreRepository genreRepository;
 
-    public Genre retrieveGenreByName(String name){
-        return genreRepository.findByName(name);
-    }
-
     public GenreStorage(GenreRepository genreRepository) {
         this.genreRepository = genreRepository;
+    }
+    public Genre retrieveGenreByName(String name){
+        return genreRepository.findByName(name);
     }
 
     public Genre retrieveGenreById(Long id) {
