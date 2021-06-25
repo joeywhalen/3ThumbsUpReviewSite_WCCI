@@ -11,7 +11,7 @@
 body {
   background-color: khaki;
   height: auto;
-  
+
 }
 
 /* img {
@@ -67,11 +67,9 @@ body {
 .overlay-layer {
   display: flex;
   height: 275px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0,
-    rgba(0, 0, 0, 0.877) 80%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.877) 80%);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -135,11 +133,9 @@ a.nav-link:active {
 }
 
 .genre-link-body {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0) 0,
-    rgba(0, 0, 0, 0.877) 60%
-  );
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.877) 60%);
   height: 30%;
   color: white;
   display: flex;
@@ -269,7 +265,7 @@ a.movie-link:hover {
 
 .movie-text {
   padding-top: 20px;
-  font-family: 'Lato','Arial', sans-serif;
+  font-family: 'Lato', 'Arial', sans-serif;
   color: darkred;
 }
 
@@ -286,7 +282,7 @@ a.movie-link:hover {
 .review-poster img {
   max-height: 315px;
   /* max-width: 300px; */
-  width:auto;
+  width: auto;
   /* height: auto; */
 }
 
@@ -307,7 +303,7 @@ a.movie-link:hover {
   justify-content: flex-start;
   flex-wrap: wrap;
   box-shadow: 0px -4px 10px 1px #0000007e;
- 
+
 }
 
 .hashtag h3 {
@@ -328,7 +324,7 @@ a.movie-link:hover {
   height: 75px;
   justify-content: space-between;
   padding-bottom: 20px;
-  
+
 }
 
 /* -------------------------------------- */
