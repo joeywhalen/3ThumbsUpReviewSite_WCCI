@@ -6,11 +6,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.repository.MovieRepository;
 @Controller
-
 public class MovieController {
 
     private MovieStorage movieStorage;
-    public MovieController(MovieRepository movieRepository) {this.movieStorage = movieStorage; }
+    public MovieController(MovieStorage movieStorage) {
+        this.movieStorage = movieStorage ;
+
+    }
 
     @RequestMapping("/movies")
     public String displayAllMovies(Model model){
@@ -27,6 +29,6 @@ public class MovieController {
         Movie movieToDisplay = movieStorage.retrieveMovieByTitle(title);
         model.addAttribute("movie", movieToDisplay);
 
-        return "movie";
+        return "single-review";
     }
 }

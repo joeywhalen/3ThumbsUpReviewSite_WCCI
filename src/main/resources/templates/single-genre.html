@@ -43,43 +43,14 @@
 
 
             <div class="action-genre-movies">
+                <div class="single-movie" th:each="movie:${genre.movies}">
                 <a href="action-review.html" class="movie-link">
-                    <h2>Bullitt</h2>
+                    <h2 th:text="${movie.title}">Bullitt</h2>
                     <img class="movie-icon"
-                         src="https://m.media-amazon.com/images/M/MV5BNWYxNzIxOTEtZWQyNS00OWY3LTgwNmMtMTI1MjI1MTE5OTZkXkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_.jpg"
+                         th:src="${movie.posterUrl}"
                          alt="Bullitt Movie Poster">
                 </a>
-                <a href="action-review.html" class="movie-link">
-                    <h2>Con Air</h2>
-                    <img class="movie-icon"
-                         src="https://images-na.ssl-images-amazon.com/images/I/514F8JgREKL._AC_.jpg"
-                         alt="Con Air Movie Poster">
-                </a>
-                <a href="action-review.html" class="movie-link">
-                    <h2>Die Hard</h2>
-                    <img class="movie-icon"
-                         src="https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
-                         alt="Die Hard Movie Poster">
-                </a>
-                <a href="action-review.html" class="movie-link">
-
-                    <h2>The French Connection</h2>
-                    <img class="movie-icon"
-                         src="https://cdn.shopify.com/s/files/1/1416/8662/products/french_connection_1971_linen_original_film_art_f_1200x.jpg?v=1582765548"
-                         alt="The French Connection Movie Poster">
-                </a>
-                <a href="action-review.html" class="movie-link">
-                    <h2>Point Break</h2>
-                    <img class="movie-icon"
-                         src="https://images-na.ssl-images-amazon.com/images/I/815GLk-ggYL._AC_SL1500_.jpg"
-                         alt="Point Break Break Movie Poster">
-                </a>
-                <a href="action-review.html" class="movie-link">
-                    <h2>Speed</h2>
-                    <img class="movie-icon"
-                         src="https://cdn.shopify.com/s/files/1/0013/2874/2466/products/speed-get-ready-for-rush-hour-keanu-reeves-1994-vintage-movie-promo-poster-27-x-39-620_705x.jpg?v=1616623980"
-                         alt="Speed Movie Poster">
-                </a>
+                </div>
 
             </div>
 

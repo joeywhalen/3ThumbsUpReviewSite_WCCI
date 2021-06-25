@@ -18,12 +18,12 @@ public class GenreController {
         return "all-genres";
     }
 
-//    @RequestMapping("genres/{name}")
-//    public String displaySingleGenre(Model model, @PathVariable String name){
-//
-//        Genre genres = genreStorage.retrieveGenreByName(name);
-//        model.addAttribute("genre", name);
-//
-//        return "genre";
-//    }
+    @RequestMapping("genres/{name}")
+    public String displaySingleGenre(Model model, @PathVariable String name){
+
+        Genre genre = genreStorage.retrieveGenreByName(name);
+        model.addAttribute("genre", genre);
+
+        return "single-genre";
+    }
 }

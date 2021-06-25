@@ -49,7 +49,7 @@
 
                     <div th:each="genre:${genres}"  th:class="'genre ' + ${genre.name}">
                         <div class="genre-link-body">
-                            <a th:text="${genre.name}" class="genre-link" href="#">
+                            <a th:text="${genre.name}" class="genre-link" th:href="'/genres/' + ${genre.name}">
                                 ACTION
                             </a>
                         </div>
