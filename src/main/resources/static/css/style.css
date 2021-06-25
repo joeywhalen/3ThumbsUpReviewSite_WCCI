@@ -76,8 +76,9 @@ body {
 }
 
 .logo {
-  display: flexbox;
+  display: flex;
   padding-bottom: 20px;
+  width: 50px;
 }
 
 .nav-bar {

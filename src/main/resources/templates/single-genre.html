@@ -7,11 +7,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Action Genres</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/jaw.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -44,7 +42,7 @@
 
             <div class="action-genre-movies">
                 <div class="single-movie" th:each="movie:${genre.movies}">
-                <a href="action-review.html" class="movie-link">
+                <a th:href="'/movies/' + ${movie.title}" class="movie-link">
                     <h2 th:text="${movie.title}">Bullitt</h2>
                     <img class="movie-icon"
                          th:src="${movie.posterUrl}"

@@ -1,60 +1,138 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bullitt Review</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/layout.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>3 Thumbs Up - Movie Reviews!</title>
 
-<body>
-<a href="index.html">Home</a><br>
-<a href="action-genre.html">Back to Action</a>
-<br><br>
+        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
 
-<h1 th:text="${movie}">BULLITT</h1>
-<div class="review-poster">
-    <img src="https://m.media-amazon.com/images/M/MV5BNWYxNzIxOTEtZWQyNS00OWY3LTgwNmMtMTI1MjI1MTE5OTZkXkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_.jpg"
-         alt="Bullitt movie poster">
-</div>
+    <body>
+        <div class="container">
 
-<h3 th:text="${movie.trailerUrl}">View the official trailer:</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BsvD806qNM8" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-<h3>Release Date: 1968</h3>
-<h3>MPAA Rated: M/PG</h3>
-<h3>Good Date Movie? <img class="thumb-up-down"
-                          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/273/thumbs-up_1f44d.png">
-</h3>
-<br>
-<hr>
-<br>
-<p>An all-guts, no-glory San Francisco cop becomes determined to find the underworld kingpin that killed the
-    witness in his protection.</p>
-<br>
-<hr><br>
-<div class="review-stars">
-    <h3>Rating: <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/1200px-5_stars.svg.png">
-    </h3>
-</div>
-<hr><br>
-<h2><a href=buddies-hashtag.html>#BuddyMovie</a>
-    <a href="car-chase-hashtag.html">#CarChase </a>
-    <a href="#">#Funny </a>
-    <a href="#">#Alcoholics</a></h2>
 
-<footer>
-    <div class="footer">
-        <small>WCCI - 3 Thumbs Up Movie Review, 2021 ©</small>
-    </div>
-</footer>
-</body>
+            <div class="header">
+                <div class="overlay-layer">
+
+                    <div class="logo">
+                        <img src="/images/test-logo.png">
+                    </div>
+                    <div class="nav-bar">
+                        <div><a class="nav-link" href="#">All Genres</a></div>
+                        <div><a class="nav-link" href="#">Submit Review</a></div>
+                        <div><a class="nav-link" href="#">Hashtags</a></div>
+                        <!-- <div class="item"><a href="#">Link 4</a></div> -->
+                    </div>
+
+
+                </div>
+                <div class="movie-strip"></div>
+
+            </div>
+
+
+            <div class="main-content-container">
+
+
+                <div class="left-curtain"></div>
+
+                <div class="main-content">
+
+                    <div class="movie-title">
+                        <h1>BULLITT</h1>
+                    </div>
+                    <div class="media">
+                        <div class="review-poster">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNWYxNzIxOTEtZWQyNS00OWY3LTgwNmMtMTI1MjI1MTE5OTZkXkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_.jpg"
+                                alt="Bullitt movie poster">
+                        </div>
+                        <div class="movie-trailer">
+                            <h3>View the official trailer:</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/BsvD806qNM8"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="movie-info">
+                        <div class="release-date">
+                            <h3>Release Date: 1968</h3>
+                        </div>
+                        <div class="mpaa-rating">
+                            <h3>MPAA Rated: M/PG</h3>
+                        </div>
+                        <div class="good-date">
+                            <h3>Good Date Movie? <img class="thumb-up-down"
+                                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/273/thumbs-up_1f44d.png">
+                            </h3>
+                        </div>
+                    </div>
+                    <br>
+                    <hr><br>
+                    <p class="movie-text">"An all-guts, no-glory San Francisco cop becomes determined to find the
+                        underworld kingpin that killed the
+                        witness in his protection."</p>
+                    <div class="review-stars img">
+                        <h3>Rating: <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/1200px-5_stars.svg.png">
+                        </h3>
+                    </div>
+
+                </div>
+
+                <div class="right-curtain"></div>
+
+
+            </div>
+
+            <div class="hashtag">
+                <h3>#CarChase</h3>
+                <h3>#BuddyMovie</h3>
+                <h3>#Slasher</h3>
+                <h3>#Cheesy</h3>
+                <h3>#CarChase</h3>
+                <h3>#BuddyMovie</h3>
+                <h3>#Slasher</h3>
+                <h3>#Cheesy</h3>
+                <h3>#CarChase</h3>
+                <h3>#BuddyMovie</h3>
+                <h3>#Slasher</h3>
+                <h3>#Cheesy</h3>
+                <h3>#CarChase</h3>
+                <h3>#BuddyMovie</h3>
+                <h3>#Slasher</h3>
+                <h3>#Cheesy</h3>
+                <h3>#CarChase</h3>
+                <h3>#BuddyMovie</h3>
+                <h3>#Slasher</h3>
+                <h3>#Cheesy</h3>
+                <h3>#CarChase</h3>
+                <h3>#BuddyMovie</h3>
+                <h3>#Slasher</h3>
+                <h3>#Cheesy</h3>
+                <h3>#CarChase</h3>
+                <h3>#BuddyMovie</h3>
+                <h3>#Slasher</h3>
+                <h3>#Cheesy</h3>
+                <h3>#CarChase</h3>
+                <h3>#BuddyMovie</h3>
+                <h3>#Slasher</h3>
+                <h3>#Cheesy</h3>
+            </div>
+
+
+            <div class="footer">
+                <div class="movie-strip"></div>
+                <small>3 Thumbs Up Movie Reviews, WCCI 2021</small>
+            </div>
+
+        </div>
+    </body>
 
 </html>
