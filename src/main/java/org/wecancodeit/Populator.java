@@ -300,7 +300,7 @@ public class Populator implements CommandLineRunner {
                 5,
                 horrorGenre);
 
-        Movie fridaythe13th = new Movie("Friday the 13th",
+        Movie fridayThe13th = new Movie("Friday the 13th",
                 "https://cdn.shopify.com/s/files/1/1416/8662/products/friday_the_13th_1980_linen_original_film_art_f_75457272-c414-4725-8468-82c2a212f77e_1200x.jpg?v=1612308325",
                 "https://www.youtube.com/embed/sAzkW7HFh5U",
                 1980,
@@ -344,7 +344,75 @@ public class Populator implements CommandLineRunner {
                 5,
                 horrorGenre);
 
-        
+        Movie alien = new Movie("Alien",
+                "https://m.media-amazon.com/images/I/41ltBoq45nL._AC_.jpg",
+                "https://www.youtube.com/embed/Fuv1zokIqtE",
+                1979,
+                "R",
+                true,
+                "After a space merchant vessel receives an unknown transmission as a distress call, one of the\n" +
+                        "                    crew is attacked by a mysterious life form and they soon realize that its life cycle has merely begun.",
+                5,
+                suspenseGenre);
+
+        Movie blueVelvet = new Movie("Blue Velvet",
+                "https://images-na.ssl-images-amazon.com/images/I/51q-uVPdv1L._AC_.jpg",
+                "https://www.youtube.com/embed/k_BybDB_phY",
+                1986,
+                "R",
+                true,
+                "The discovery of a severed human ear found in a field leads a young man on an investigation\n" +
+                        "                    related to a beautiful, mysterious nightclub singer and a group of psychopathic criminals who\n" +
+                        "                    have kidnapped her child.",
+                5,
+                suspenseGenre);
+
+        Movie deliverance = new Movie("Deliverance",
+                "https://m.media-amazon.com/images/M/MV5BZjBhYzU3NWItOWZjMy00NjI5LWFmYmItZmIyOWFlMDIxMWNiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+                "https://www.youtube.com/embed/ZrA1RC96LyY",
+                1972,
+                "R",
+                false,
+                "Intent on seeing the Cahulawassee River before it's dammed and turned into a lake, outdoor\n" +
+                        "                    fanatic Lewis Medlock takes his friends on a canoeing trip they'll never forget into the\n" +
+                        "                    dangerous American back-country.",
+                4,
+                suspenseGenre);
+
+        Movie dogDayAfternoon = new Movie("Dog Day Afternoon",
+                "https://cdn.shopify.com/s/files/1/0747/3829/products/HP3158_94883411-0c48-483e-bed6-580995428ae8_1024x1024.jpg?v=1571445155",
+                "https://www.youtube.com/embed/Ne6KMHLTvik",
+                1975,
+                "R",
+                true,
+                "Three amateur bank robbers plan to hold up a bank. A nice simple robbery: Walk in, take the\n" +
+                        "                    money, and run. Unfortunately, the supposedly uncomplicated heist suddenly becomes a bizarre\n" +
+                        "                    nightmare as everything that could go wrong does.",
+                4,
+                suspenseGenre);
+
+        Movie escapeFromAlcatraz = new Movie("Escape from Alcatraz",
+                "https://m.media-amazon.com/images/M/MV5BNDQ3MzNjMDItZjE0ZS00ZTYxLTgxNTAtM2I4YjZjNWFjYjJlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY1200_CR80,0,630,1200_AL_.jpg",
+                "https://www.youtube.com/embed/KSS0fH9zzFY",
+                1979,
+                "PG",
+                true,
+                "Alcatraz is the most secure prison of its time. It is believed that no one can ever escape from\n" +
+                        "                    it, until three daring men make a possible successful attempt at escaping from one of the most\n" +
+                        "                    infamous prisons in the world.",
+                4,
+                suspenseGenre);
+
+        Movie jaws = new Movie("Jaws",
+                "https://cdn.shopify.com/s/files/1/1057/4964/products/jaws-vintage-movie-poster-original-1-sheet-27x41-392_300x@2x.jpg?v=1618606829",
+                "https://www.youtube.com/embed/U1fu_sA7XhE",
+                1975,
+                "PG",
+                true,
+                "When a killer shark unleashes chaos on a beach community, it's up to a local sheriff, a marine\n" +
+                        "                    biologist, and an old seafarer to hunt the beast down.",
+                5,
+                suspenseGenre);
 
         genreStorage.saveGenre(actionGenre);
         genreStorage.saveGenre(comedyGenre);
@@ -383,11 +451,16 @@ public class Populator implements CommandLineRunner {
 
         movieStorage.saveMovie(eraserhead);
         movieStorage.saveMovie(exorcist);
-        movieStorage.saveMovie(fridaythe13th);
+        movieStorage.saveMovie(fridayThe13th);
         movieStorage.saveMovie(halloween);
         movieStorage.saveMovie(shining);
         movieStorage.saveMovie(texasChainsawMassacre);
 
-
+        movieStorage.saveMovie(alien);
+        movieStorage.saveMovie(blueVelvet);
+        movieStorage.saveMovie(deliverance);
+        movieStorage.saveMovie(dogDayAfternoon);
+        movieStorage.saveMovie(escapeFromAlcatraz);
+        movieStorage.saveMovie(jaws);
     }
 }
