@@ -333,6 +333,17 @@ public class Populator implements CommandLineRunner {
                 4,
                 horrorGenre);
 
+        Movie texasChainsawMassacre = new Movie("The Texas Chainsaw Massacre",
+                "https://cdn.shopify.com/s/files/1/1416/8662/products/texas_chainsaw_massacre_1974_linen_original_film_art_f_1200x.jpg?v=1620170535",
+                "https://www.youtube.com/embed/HgJQvyngAeM",
+                1974,
+                "R",
+                false,
+                "Two siblings and three of their friends en route to visit their grandfather's grave in Texas fall\n" +
+                        "                    victim to a family of cannibalistic psychopaths.",
+                5,
+                horrorGenre);
+
         
 
         genreStorage.saveGenre(actionGenre);
@@ -374,6 +385,9 @@ public class Populator implements CommandLineRunner {
         movieStorage.saveMovie(exorcist);
         movieStorage.saveMovie(fridaythe13th);
         movieStorage.saveMovie(halloween);
+        movieStorage.saveMovie(shining);
+        movieStorage.saveMovie(texasChainsawMassacre);
+
 
     }
 }
