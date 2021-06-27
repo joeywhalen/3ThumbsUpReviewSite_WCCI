@@ -185,7 +185,7 @@ public class Populator implements CommandLineRunner {
                 documentaryGenre);
 
         Movie stopMakingSense = new Movie("Stop Making Sense",
-                "https://images-na.ssl-images-amazon.com/images/I/716L2b9mjkL._AC_SY879_.jpg",
+                "https://i5.walmartimages.com/asr/2f4a2cc0-2031-4531-b42f-6bf1c46c4e69_1.3a47dce8a1f16d836ab467f9e85ea03f.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff",
                 "https://www.youtube.com/embed/yCXT5Fs-V10",
                 1984,
                 "NR",
@@ -259,7 +259,7 @@ public class Populator implements CommandLineRunner {
 
         Movie taxiDriver = new Movie("Taxi Driver",
                 "https://www.joblo.com/assets/images/oldsite/posters/images/full/taxi-driver-poster2.jpg",
-                "https://www.youtube.com/embed/UUxD4-dEzn0",
+                "https://www.youtube.com/embed/cujiHDeqnHY",
                 1976,
                 "R",
                 false,
