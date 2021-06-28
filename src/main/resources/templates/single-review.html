@@ -76,9 +76,15 @@
                         </div>
                         <div class="good-date">
                             <h3>Good Date Movie?</h3>
-                            <h3 th:text="${movie.dateMovie}">Good Date Movie? <img class="thumb-up-down"
+                            <div th:switch="${movie.dateMovie}">
+                                <img class="thumb-up-down" th:case="${true}"
                                     src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/273/thumbs-up_1f44d.png">
-                            </h3>
+                                <img class="thumb-up-down" th:case="*"
+                                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/whatsapp/238/thumbs-down-sign_1f44e.png">
+                            </div>
+                            <!-- <h3 th:text="${movie.dateMovie}">Good Date Movie? <img class="thumb-up-down"
+                                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/273/thumbs-up_1f44d.png">
+                            </h3> -->
                         </div>
                     </div>
                     <br>
