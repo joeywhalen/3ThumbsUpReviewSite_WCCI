@@ -78,7 +78,7 @@
                             <h3>Good Date Movie?</h3>
                             <div th:switch="${movie.dateMovie}">
                                 <img class="thumb-up-down" th:case="${true}"
-                                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/273/thumbs-up_1f44d.png">
+                                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/whatsapp/238/thumbs-up-sign_emoji-modifier-fitzpatrick-type-5_1f44d-1f3fe_1f3fe.png">
                                 <img class="thumb-up-down" th:case="*"
                                     src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/whatsapp/238/thumbs-down-sign_1f44e.png">
                             </div>
@@ -94,7 +94,16 @@
                         underworld kingpin that killed the
                         witness in his protection."</p>
                     <div class="review-stars img">
-                        <h3 th:text="${movie.starRating}">Rating: <img
+                        <h3 th:switch="${movie.starRating}">Rating:
+                            <img th:case="'1'"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/1_stars.svg/2560px-1_stars.svg.png">
+                            <img th:case="'2'"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/2_stars.svg/1280px-2_stars.svg.png">
+                            <img th:case="'3'"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/3_stars.svg/1280px-3_stars.svg.png">
+                            <img th:case="'4'"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/4_stars.svg/1200px-4_stars.svg.png">
+                            <img th:case="*"
                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/1200px-5_stars.svg.png">
                         </h3>
                     </div>
