@@ -17,14 +17,9 @@ public class MovieStorage {
         this.hashtagRepository = hashtagRepository;
     }
 
-
-
-
     public Movie retrieveMovieByTitle(String title){
         return movieRepository.findByTitle(title);
     }
-
-
 
     public Movie retrieveMovieById(Long id) {
         return movieRepository.findById(id).get();
@@ -34,8 +29,9 @@ public class MovieStorage {
         movieRepository.deleteById(id);
     }
 
-    public void saveMovie(Movie movieToAdd) {
+    public Movie saveMovie(Movie movieToAdd) {
         movieRepository.save(movieToAdd);
+        return movieToAdd;
     }
 
     public Iterable<Movie> retrieveAllMovies() {
@@ -44,9 +40,5 @@ public class MovieStorage {
 
     public Iterable<Hashtags> retrieveAllHashtags() {
         return hashtagRepository.findAll();
-
-
     }
-
-
 }

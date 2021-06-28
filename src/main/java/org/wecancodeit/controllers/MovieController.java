@@ -3,6 +3,7 @@ package org.wecancodeit.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wecancodeit.pojos.Hashtags;
 import org.wecancodeit.pojos.Movie;
@@ -33,6 +34,14 @@ public class MovieController {
         model.addAttribute("movie", movieToDisplay);
 
         return "single-review";
+    }
+
+    @PostMapping("/addreview")
+    public String addMovieReview(Model model, @PathVariable Movie movieToAdd) {
+        Movie reviewToAdd = movieStorage.saveMovie(movieToAdd);
+        model.addAttribute("movie", movieToAdd);
+
+        return "add-review";
     }
 
     @RequestMapping("/hashtags")

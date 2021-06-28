@@ -26,7 +26,7 @@
                     </div>
                     <div class="nav-bar">
                         <div><a class="nav-link" href="/genres">All Genres</a></div>
-                        <div><a class="nav-link" href="#">Submit Review</a></div>
+                        <div><a class="nav-link" href="/add-review">Submit Review</a></div>
                         <div><a class="nav-link" href="/hashtags">Hashtags</a></div>
                         <!-- <div class="item"><a href="#">Link 4</a></div> -->
                     </div>
@@ -47,7 +47,7 @@
 
 
 
-                    <div th:each="genre:${genres}"  th:class="'genre ' + ${genre.name}">
+                    <div th:each="genre:${genres}" th:class="'genre ' + ${genre.name}">
                         <div class="genre-link-body">
                             <a th:text="${genre.name}" class="genre-link" th:href="'/genres/' + ${genre.name}">
                                 ACTION
@@ -57,45 +57,45 @@
 
 
 
-<!--                    <div class="genre comedy">-->
-<!--                        <div class="genre-link-body">-->
-<!--                            <a class="genre-link" href="#">-->
-<!--                                COMEDY-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="genre comedy">-->
+                    <!--                        <div class="genre-link-body">-->
+                    <!--                            <a class="genre-link" href="#">-->
+                    <!--                                COMEDY-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
 
-<!--                    <div class="genre documentary">-->
-<!--                        <div class="genre-link-body">-->
-<!--                            <a class="genre-link" href="#">-->
-<!--                                DOCUMENTARY-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="genre documentary">-->
+                    <!--                        <div class="genre-link-body">-->
+                    <!--                            <a class="genre-link" href="#">-->
+                    <!--                                DOCUMENTARY-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
 
-<!--                    <div class="genre drama">-->
-<!--                        <div class="genre-link-body">-->
-<!--                            <a class="genre-link" href="#">-->
-<!--                                DRAMA-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="genre drama">-->
+                    <!--                        <div class="genre-link-body">-->
+                    <!--                            <a class="genre-link" href="#">-->
+                    <!--                                DRAMA-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
 
-<!--                    <div class="genre horror">-->
-<!--                        <div class="genre-link-body">-->
-<!--                            <a class="genre-link" href="#">-->
-<!--                                HORROR-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="genre horror">-->
+                    <!--                        <div class="genre-link-body">-->
+                    <!--                            <a class="genre-link" href="#">-->
+                    <!--                                HORROR-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
 
-<!--                    <div class="genre suspense">-->
-<!--                        <div class="genre-link-body">-->
-<!--                            <a class="genre-link" href="#">-->
-<!--                                SUSPENSE-->
-<!--                            </a>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="genre suspense">-->
+                    <!--                        <div class="genre-link-body">-->
+                    <!--                            <a class="genre-link" href="#">-->
+                    <!--                                SUSPENSE-->
+                    <!--                            </a>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
 
 
 
