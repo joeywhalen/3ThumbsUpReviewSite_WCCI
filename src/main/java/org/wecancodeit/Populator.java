@@ -2,16 +2,24 @@ package org.wecancodeit;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.wecancodeit.pojos.Genre;
+import org.wecancodeit.pojos.Hashtags;
+import org.wecancodeit.pojos.Movie;
+import org.wecancodeit.repository.HashtagRepository;
+import org.wecancodeit.storage.GenreStorage;
+import org.wecancodeit.storage.MovieStorage;
 
 @Component
 public class Populator implements CommandLineRunner {
     private MovieStorage movieStorage;
     private GenreStorage genreStorage;
+    private HashtagRepository hashtagRepository;
 
 
-    public Populator(MovieStorage movieStorage, GenreStorage genreStorage) {
+    public Populator(MovieStorage movieStorage, GenreStorage genreStorage, HashtagRepository hashtagRepository) {
         this.movieStorage= movieStorage;
         this.genreStorage = genreStorage;
+        this.hashtagRepository = hashtagRepository;
     }
 
     @Override
@@ -23,6 +31,21 @@ public class Populator implements CommandLineRunner {
         Genre horrorGenre = new Genre("horror");
         Genre suspenseGenre = new Genre("suspense");
 
+        Hashtags hashOne = new Hashtags("#CarChase");
+        Hashtags hashTwo = new Hashtags("#BuddyMovie");
+        Hashtags hashThree = new Hashtags("#Cheesy");
+        Hashtags hashFour = new Hashtags("#Slasher");
+        Hashtags hashFive = new Hashtags("#Violent");
+        Hashtags hashSix = new Hashtags("#Funny");
+        hashtagRepository.save(hashOne);
+        hashtagRepository.save(hashTwo);
+        hashtagRepository.save(hashThree);
+        hashtagRepository.save(hashFour);
+        hashtagRepository.save(hashFive);
+        hashtagRepository.save(hashSix);
+
+
+
         Movie bullit = new Movie("Bullit",
                 "https://m.media-amazon.com/images/M/MV5BNWYxNzIxOTEtZWQyNS00OWY3LTgwNmMtMTI1MjI1MTE5OTZkXkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_.jpg",
                 "https://www.youtube.com/embed/BsvD806qNM8",
@@ -32,7 +55,7 @@ public class Populator implements CommandLineRunner {
                 "An all-guts, no-glory San Francisco cop becomes determined to find the underworld kingpin that killed the\n" +
                         "            witness in his protection.",
                 4,
-                actionGenre);
+                actionGenre,hashOne,hashTwo,hashThree);
 
         Movie conAir = new Movie("Con Air",
                 "https://images-na.ssl-images-amazon.com/images/I/514F8JgREKL._AC_.jpg",
@@ -43,7 +66,7 @@ public class Populator implements CommandLineRunner {
                 "Newly paroled ex-con and former U.S. Ranger Cameron Poe finds himself trapped in a prisoner transport\n" +
                         "                    plane when the passengers seize control.",
                 4,
-                actionGenre);
+                actionGenre,hashOne,hashTwo,hashThree,hashFour);
 
         Movie dieHard = new Movie("Die Hard",
                 "https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
@@ -54,7 +77,7 @@ public class Populator implements CommandLineRunner {
                 "An NYPD officer tries to save his wife and several others taken hostage by German terrorists during a\n" +
                         "                    Christmas party at the Nakatomi Plaza in Los Angeles.",
                 5,
-                actionGenre);
+                actionGenre,hashFive,hashSix);
 
         Movie frenchConnection = new Movie("The French Connection",
                 "https://cdn.shopify.com/s/files/1/1416/8662/products/french_connection_1971_linen_original_film_art_f_1200x.jpg?v=1582765548",
@@ -65,7 +88,7 @@ public class Populator implements CommandLineRunner {
                 "A pair of NYC cops in the Narcotics Bureau stumble onto a drug smuggling job with a French\n" +
                         "                     connection.",
                 4,
-                actionGenre);
+                actionGenre,hashTwo,hashFour,hashSix);
 
         Movie pointBreak = new Movie("Point Break",
                 "https://images-na.ssl-images-amazon.com/images/I/815GLk-ggYL._AC_SL1500_.jpg",
@@ -75,7 +98,7 @@ public class Populator implements CommandLineRunner {
                 true,
                 "An F.B.I. Agent goes undercover to catch a gang of surfers who may be bank robbers.",
                 4,
-                actionGenre);
+                actionGenre,hashThree,hashFive,hashSix);
 
         Movie speed = new Movie("Speed",
                 "https://cdn.shopify.com/s/files/1/0013/2874/2466/products/speed-get-ready-for-rush-hour-keanu-reeves-1994-vintage-movie-promo-poster-27-x-39-620_705x.jpg?v=1616623980",

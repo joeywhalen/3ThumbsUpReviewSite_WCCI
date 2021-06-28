@@ -1,9 +1,12 @@
-package org.wecancodeit;
+package org.wecancodeit.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.wecancodeit.pojos.Genre;
+import org.wecancodeit.storage.GenreStorage;
+
 @Controller
 public class GenreController {
     private GenreStorage genreStorage;

@@ -1,6 +1,7 @@
-package org.wecancodeit;
+package org.wecancodeit.storage;
 
 import org.springframework.stereotype.Service;
+import org.wecancodeit.pojos.Genre;
 import org.wecancodeit.repository.GenreRepository;
 
 @Service

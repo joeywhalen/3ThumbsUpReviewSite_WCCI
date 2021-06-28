@@ -1,10 +1,13 @@
-package org.wecancodeit;
+package org.wecancodeit.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.wecancodeit.repository.MovieRepository;
+import org.wecancodeit.pojos.Hashtags;
+import org.wecancodeit.pojos.Movie;
+import org.wecancodeit.storage.MovieStorage;
+
 @Controller
 public class MovieController {
 
@@ -30,5 +33,16 @@ public class MovieController {
         model.addAttribute("movie", movieToDisplay);
 
         return "single-review";
+    }
+
+    @RequestMapping("/hashtags")
+    public String displayAllHashtags(Model model) {
+
+        Iterable<Hashtags> allHashtags = movieStorage.retrieveAllHashtags();
+
+        model.addAttribute("hashtags", allHashtags);
+
+        return "hashtags";
+
     }
 }

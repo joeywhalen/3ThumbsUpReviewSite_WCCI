@@ -1,4 +1,4 @@
-package org.wecancodeit;
+package org.wecancodeit.pojos;
 
 import javax.persistence.*;
 import java.util.Collection;

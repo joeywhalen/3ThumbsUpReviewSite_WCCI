@@ -1,7 +1,9 @@
-package org.wecancodeit;
+package org.wecancodeit.pojos;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Movie {
@@ -25,12 +27,15 @@ public class Movie {
     @ManyToOne
     private Genre genre;
 
+    @ManyToMany
+    private Collection<Hashtags> hashtags;
+
     public Movie() {
 
     }
 
     public Movie(String title, String posterUrl, String trailerUrl, int releaseDate, String mpaaRating,
-                 boolean dateMovie, String description, int starRating, Genre genre) {
+                 boolean dateMovie, String description, int starRating, Genre genre, Hashtags... hashtags) {
         this.title = title;
         this.posterUrl = posterUrl;
         this.trailerUrl = trailerUrl;
@@ -40,6 +45,7 @@ public class Movie {
         this.description = description;
         this.starRating = starRating;
         this.genre = genre;
+        this.hashtags = Set.of(hashtags);
     }
 
     public Long getId() {
@@ -81,6 +87,13 @@ public class Movie {
     public Genre getGenre() {
         return genre;
     }
+
+    public Collection<Hashtags> getHashtags() {
+        return hashtags;
+    }
+
+
+
 
     @Override
     public String toString() {
