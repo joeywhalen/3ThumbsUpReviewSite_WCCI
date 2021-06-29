@@ -5,4 +5,8 @@ import org.wecancodeit.pojos.Hashtags;
 
 public interface HashtagRepository extends CrudRepository<Hashtags, Long> {
 
+    Boolean existsByHashName(String hashName);
+
+
+
 }

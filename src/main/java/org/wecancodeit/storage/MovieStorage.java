@@ -14,27 +14,33 @@ public class MovieStorage {
     private MovieRepository movieRepository;
     private HashtagRepository hashtagRepository;
 
-    public MovieStorage(MovieRepository movieRepository,HashtagRepository hashtagRepository) {
+    public MovieStorage(MovieRepository movieRepository, HashtagRepository hashtagRepository) {
         this.movieRepository = movieRepository;
         this.hashtagRepository = hashtagRepository;
     }
 
 
-    public void addHashtagToMovie (String userHashtag, Movie movie) {
+    public void addHashtagToMovie(String userHashtag, Movie movie) {
 
         Hashtags tagToAdd = new Hashtags(userHashtag);
-        hashtagRepository.save(tagToAdd);
 
-        Collection<Hashtags> tagsToModify = movie.getHashtags();
-        tagsToModify.add(tagToAdd);
+        if (hashtagRepository.existsByHashName(userHashtag)) {
+            //hashtag already exists
+            Collection<Hashtags> tagsToModify = movie.getHashtags();
+            tagsToModify.add(tagToAdd);
+
+
+        } else {
+            //hashtag does NOT exists
+            hashtagRepository.save(tagToAdd);
+            Collection<Hashtags> tagsToModify = movie.getHashtags();
+            tagsToModify.add(tagToAdd);
+        }
 
     }
 
 
-
-
-
-    public Movie retrieveMovieByTitle(String title){
+    public Movie retrieveMovieByTitle(String title) {
         return movieRepository.findByTitle(title);
     }
 
@@ -58,4 +64,6 @@ public class MovieStorage {
     public Iterable<Hashtags> retrieveAllHashtags() {
         return hashtagRepository.findAll();
     }
+
+
 }
