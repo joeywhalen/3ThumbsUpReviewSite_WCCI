@@ -1,116 +1,116 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>3 Thumbs Up - Movie Reviews!</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3 Thumbs Up - Movie Reviews!</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/layout.css">
-    </head>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/layout.css">
+</head>
 
-    <body>
-        <div class="container">
+<body>
+<div class="container">
 
-            <div class="header">
-                <div class="overlay-layer">
+    <div class="header">
+        <div class="overlay-layer">
 
-                    <div class="logo">
-                        <img src="/images/test-logo.png">
-                    </div>
-                    <div class="nav-bar">
-                        <div><a class="nav-link" href="/genres">All Genres</a></div>
-                        <div><a class="nav-link" href="/add-review.html">Submit Review</a></div>
-                        <div><a class="nav-link" href="/hashtags">Hashtags</a></div>
-                        <!-- <div class="item"><a href="#">Link 4</a></div> -->
-                    </div>
-
-                </div>
-                <div class="movie-strip"></div>
-
+            <div class="logo">
+                <img src="/images/test-logo.png">
             </div>
-
-            <div class="main-content-container">
-
-                <div class="left-curtain"></div>
-
-                <div class="main-content">
-                    <div>
-                        <form action="/addreview" method="POST">
-                            <label for="title">Movie Title</label>
-                            <input type="text" id="title" name="title" placeholder="Movie title..">
-                            <br>
-                            <label for="posterUrl">Movie Poster URL</label>
-                            <input type="text" id="posterUrl" name="posterUrl" placeholder="Movie poster url..">
-                            <br>
-                            <label for="trailerUrl">Movie Trailer URL</label>
-                            <input type="text" id="trailerUrl" name="trailerUrl" placeholder="Movie trailer url..">
-                            <br>
-                            <label for="releaseDate">Movie Release Date</label>
-                            <input type="text" id="releaseDate" name="releaseDate" placeholder="Movie release date..">
-                            <br>
-                            <label for="mpaaRating">MPAA Rating</label>
-                            <input type="text" id="mpaaRating" name="mpaaRating" placeholder="MPAA rating..">
-                            <br>
-                            <label for="dateMovie">Good Date Movie?</label>
-                            <select id="dateMovie" name="dateMovie">
-                                <option value="true">True</option>
-                                <option value="false">False</option>
-                            </select>
-                            <br>
-                            <label for="description">Movie Description</label>
-                            <input type="text" id="description" name="description" placeholder="Movie description..">
-                            <br>
-                            <label for="starRating">Star Rating</label>
-                            <select id="starRating" name="starRating">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                            <br>
-                            <label for="genre">Genre</label>
-                            <select id="genre" name="genre">
-                                <option value="actionGenre">Action</option>
-                                <option value="comedyGenre">Comedy</option>
-                                <option value="documentaryGenre">Documentary</option>
-                                <option value="dramaGenre">Drama</option>
-                                <option value="horrorGenre">Horror</option>
-                                <option value="suspenseGenre">Suspense</option>
-                            </select>
-                            <br>
-                            <label for="hashtag">Movie #hashtag</label>
-                            <input type="text" id="hashtag" name="hashtag" placeholder="Movie #hashtag..">
-                            <br>
-                            <input type="submit" value="Submit">
-                        </form>
-                    </div>
-
-                </div>
-                <div class="right-curtain"></div>
-            </div>
-
-            <div class="hashtag">
-
-                <h3>#CarChase</h3>
-                <h3>#BuddyMovie</h3>
-                <h3>#Slasher</h3>
-                <h3>#Cheesy</h3>
-
-            </div>
-
-            <div class="footer">
-                <div class="movie-strip"></div>
-                <small>3 Thumbs Up Movie Reviews, WCCI 2021</small>
+            <div class="nav-bar">
+                <div><a class="nav-link" href="/genres">All Genres</a></div>
+                <div><a class="nav-link" href="#">Submit Review</a></div>
+                <div><a class="nav-link" href="/hashtags">Hashtags</a></div>
+                <!-- <div class="item"><a href="#">Link 4</a></div> -->
             </div>
 
         </div>
-    </body>
+        <div class="movie-strip"></div>
+
+    </div>
+
+    <div class="main-content-container">
+
+        <div class="left-curtain"></div>
+
+        <div class="main-content">
+            <div>
+                <form action="/addreview" id="movie" method="POST">
+
+
+                    <label for="title">Genre</label>
+
+                    <select id="genre" name="genre">
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="documentary">Documentary</option>
+                        <option value="drama">Drama</option>
+                        <option value="horror">Horror</option>
+                        <option value="suspense">Suspense</option>
+                    </select>
+                    <br>
+                    <label for="title">Movie Title</label>
+                    <input type="text" id="title" name="title" placeholder="Movie title..">
+                    <br>
+                    <label for="posterUrl">Movie Poster URL</label>
+                    <input type="text" id="posterUrl" name="posterUrl" placeholder="Movie poster url..">
+                    <br>
+                    <label for="trailerUrl">Movie Trailer URL</label>
+                    <input type="text" id="trailerUrl" name="trailerUrl" placeholder="Movie trailer url..">
+                    <br>
+                    <label for="releaseDate">Movie Release Date</label>
+                    <input type="text" id="releaseDate" name="releaseDate" placeholder="Movie release date..">
+                    <br>
+                    <label for="mpaaRating">MPAA Rating</label>
+                    <input type="text" id="mpaaRating" name="mpaaRating" placeholder="MPAA rating..">
+                    <br>
+                    <label for="dateMovie">Good Date Movie?</label>
+                    <select id="dateMovie" name="dateMovie">
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                    </select>
+                    <br>
+                    <label for="description">Movie Description</label>
+                    <input type="text" id="description" name="description" placeholder="Movie description..">
+                    <br>
+                    <label for="starRating">Star Rating</label>
+                    <select id="starRating" name="starRating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+        </div>
+        <div class="right-curtain"></div>
+    </div>
+
+    <div class="hashtag">
+
+        <h3>#CarChase</h3>
+        <h3>#BuddyMovie</h3>
+        <h3>#Slasher</h3>
+        <h3>#Cheesy</h3>
+
+    </div>
+
+    <div class="footer">
+        <div class="movie-strip"></div>
+        <small>3 Thumbs Up Movie Reviews, WCCI 2021</small>
+    </div>
+
+</div>
+</body>
 
 </html>
