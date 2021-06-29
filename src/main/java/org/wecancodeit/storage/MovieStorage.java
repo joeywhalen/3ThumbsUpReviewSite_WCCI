@@ -6,6 +6,8 @@ import org.wecancodeit.pojos.Movie;
 import org.wecancodeit.repository.HashtagRepository;
 import org.wecancodeit.repository.MovieRepository;
 
+import java.util.Collection;
+
 @Service
 public class MovieStorage {
 
@@ -16,6 +18,21 @@ public class MovieStorage {
         this.movieRepository = movieRepository;
         this.hashtagRepository = hashtagRepository;
     }
+
+
+    public void addHashtagToMovie (String userHashtag, Movie movie) {
+
+        Hashtags tagToAdd = new Hashtags(userHashtag);
+        hashtagRepository.save(tagToAdd);
+
+        Collection<Hashtags> tagsToModify = movie.getHashtags();
+        tagsToModify.add(tagToAdd);
+
+    }
+
+
+
+
 
     public Movie retrieveMovieByTitle(String title){
         return movieRepository.findByTitle(title);

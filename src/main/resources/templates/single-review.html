@@ -117,38 +117,20 @@
     </div>
 
     <div class="hashtag">
-        <h3>#CarChase</h3>
-        <h3>#BuddyMovie</h3>
-        <h3>#Slasher</h3>
-        <h3>#Cheesy</h3>
-        <h3>#CarChase</h3>
-        <h3>#BuddyMovie</h3>
-        <h3>#Slasher</h3>
-        <h3>#Cheesy</h3>
-        <h3>#CarChase</h3>
-        <h3>#BuddyMovie</h3>
-        <h3>#Slasher</h3>
-        <h3>#Cheesy</h3>
-        <h3>#CarChase</h3>
-        <h3>#BuddyMovie</h3>
-        <h3>#Slasher</h3>
-        <h3>#Cheesy</h3>
-        <h3>#CarChase</h3>
-        <h3>#BuddyMovie</h3>
-        <h3>#Slasher</h3>
-        <h3>#Cheesy</h3>
-        <h3>#CarChase</h3>
-        <h3>#BuddyMovie</h3>
-        <h3>#Slasher</h3>
-        <h3>#Cheesy</h3>
-        <h3>#CarChase</h3>
-        <h3>#BuddyMovie</h3>
-        <h3>#Slasher</h3>
-        <h3>#Cheesy</h3>
-        <h3>#CarChase</h3>
-        <h3>#BuddyMovie</h3>
-        <h3>#Slasher</h3>
-        <h3>#Cheesy</h3>
+
+        <div th:each="hashtag:${movie.getHashtags()}">
+            <h3 th:text="${hashtag.hashName}">#CarChase</h3>
+        </div>
+
+        <form th:action="'../add-hashtag/' + ${movie.title}" method="POST">
+
+            <label for="hashtag">Enter a new hashtag</label>
+            <input type="text" id="hashtag" name="hashtag" placeholder="#HashTag here...">
+            <br>
+
+            <input type="submit" value="Submit">
+        </form>
+
     </div>
 
 
