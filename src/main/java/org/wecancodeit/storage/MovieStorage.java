@@ -20,22 +20,25 @@ public class MovieStorage {
     }
 
 
-    public void addHashtagToMovie(String userHashtag, Movie movie) {
+    public void addHashtagToMovie(String userHashtag, String title) {
 
         Hashtags tagToAdd = new Hashtags(userHashtag);
 
-        if (hashtagRepository.existsByHashName(userHashtag)) {
-            //hashtag already exists
-            Collection<Hashtags> tagsToModify = movie.getHashtags();
-            tagsToModify.add(tagToAdd);
+        Movie movieToUpdate = movieRepository.findByTitle(title);
 
-
-        } else {
-            //hashtag does NOT exists
+        if (!hashtagRepository.existsByHashName(userHashtag)) {
             hashtagRepository.save(tagToAdd);
-            Collection<Hashtags> tagsToModify = movie.getHashtags();
-            tagsToModify.add(tagToAdd);
+            System.out.println("The hashtag did not exist.");
         }
+
+        Collection<Hashtags> tagsToModify = movieToUpdate.getHashtags();
+
+        tagsToModify.add(tagToAdd);
+
+        movieToUpdate.setHashtags(tagsToModify);
+
+        movieRepository.save(movieToUpdate);
+
 
     }
 

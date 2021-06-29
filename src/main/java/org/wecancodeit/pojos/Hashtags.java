@@ -1,9 +1,6 @@
 package org.wecancodeit.pojos;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -14,7 +11,7 @@ public class Hashtags {
     private Long id;
     private String hashName;
 
-    @ManyToMany(mappedBy = "hashtags")
+    @ManyToMany(mappedBy = "hashtags", cascade = {CascadeType.ALL})
     private Set<Movie> movies;
 
 

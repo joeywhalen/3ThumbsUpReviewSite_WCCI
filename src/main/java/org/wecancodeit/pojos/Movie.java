@@ -92,8 +92,9 @@ public class Movie {
         return hashtags;
     }
 
-
-
+    public void setHashtags(Collection<Hashtags> hashtags) {
+        this.hashtags = hashtags;
+    }
 
     @Override
     public String toString() {

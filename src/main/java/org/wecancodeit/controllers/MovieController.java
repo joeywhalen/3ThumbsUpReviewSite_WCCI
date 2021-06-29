@@ -7,6 +7,7 @@ import org.wecancodeit.pojos.Genre;
 import org.wecancodeit.pojos.Hashtags;
 import org.wecancodeit.pojos.Movie;
 import org.wecancodeit.repository.GenreRepository;
+import org.wecancodeit.repository.HashtagRepository;
 import org.wecancodeit.storage.GenreStorage;
 import org.wecancodeit.storage.MovieStorage;
 
@@ -17,6 +18,7 @@ public class MovieController {
 
     private MovieStorage movieStorage;
     private GenreStorage genreStorage;
+    private HashtagRepository hashtagRepository;
 
     public MovieController(MovieStorage movieStorage, GenreStorage genreStorage) {
         this.movieStorage = movieStorage;
@@ -72,11 +74,13 @@ public class MovieController {
     @PostMapping("/add-hashtag/{title}")
     public String addHashtagToMovie(Model model, @RequestParam String hashtag, @PathVariable String title) {
 
+        movieStorage.addHashtagToMovie(hashtag, title);
+
+
+
         Movie movieToModify = movieStorage.retrieveMovieByTitle(title);
-
-        movieStorage.addHashtagToMovie(hashtag, movieToModify);
-
         model.addAttribute("movie", movieToModify);
+
         return "single-review";
     }
 
