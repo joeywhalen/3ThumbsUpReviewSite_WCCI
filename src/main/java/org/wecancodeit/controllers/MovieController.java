@@ -2,24 +2,30 @@ package org.wecancodeit.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+import org.wecancodeit.pojos.Genre;
 import org.wecancodeit.pojos.Hashtags;
 import org.wecancodeit.pojos.Movie;
+import org.wecancodeit.repository.GenreRepository;
+import org.wecancodeit.storage.GenreStorage;
 import org.wecancodeit.storage.MovieStorage;
+
+import java.util.Locale;
 
 @Controller
 public class MovieController {
 
     private MovieStorage movieStorage;
-    public MovieController(MovieStorage movieStorage) {
-        this.movieStorage = movieStorage ;
+    private GenreStorage genreStorage;
+
+    public MovieController(MovieStorage movieStorage, GenreStorage genreStorage) {
+        this.movieStorage = movieStorage;
+        this.genreStorage = genreStorage;
 
     }
 
     @RequestMapping("/movies")
-    public String displayAllMovies(Model model){
+    public String displayAllMovies(Model model) {
 
         Iterable<Movie> allMovies = movieStorage.retrieveAllMovies();
         model.addAttribute("movies", allMovies);
@@ -28,7 +34,7 @@ public class MovieController {
     }
 
     @RequestMapping("movies/{title}")
-    public String displaySingleMovie(Model model, @PathVariable String title){
+    public String displaySingleMovie(Model model, @PathVariable String title) {
 
         Movie movieToDisplay = movieStorage.retrieveMovieByTitle(title);
         model.addAttribute("movie", movieToDisplay);
@@ -36,13 +42,26 @@ public class MovieController {
         return "single-review";
     }
 
+
     @PostMapping("/addreview")
-    public String addMovieReview(Model model, @PathVariable Movie movieToAdd) {
-        Movie reviewToAdd = movieStorage.saveMovie(movieToAdd);
+    public String addMovieReview(Model model,
+                                 @RequestParam String title,
+                                 String posterUrl,
+                                 String trailerUrl,
+                                 int releaseDate,
+                                 String mpaaRating,
+                                 boolean dateMovie,
+                                 String description,
+                                 int starRating,
+                                 String genre) {
+
+        Movie movieToAdd = new Movie(title, posterUrl, trailerUrl, releaseDate, mpaaRating, dateMovie, description, starRating, genreStorage.retrieveGenreByName(genre));
+        movieStorage.saveMovie(movieToAdd);
         model.addAttribute("movie", movieToAdd);
 
-        return "add-review";
+        return "single-review";
     }
+
 
     @RequestMapping("/hashtags")
     public String displayAllHashtags(Model model) {
