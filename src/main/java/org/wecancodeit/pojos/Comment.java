@@ -15,9 +15,7 @@ public class Comment {
     @ManyToOne
     private Movie movies;
 
-    public Movie getMovies() {
-        return movies;
-    }
+
 
     public Comment(String comment, Movie movies) {
         this.comment = comment;
@@ -28,6 +26,9 @@ public class Comment {
 
     }
 
+    public Movie getMovies() {
+        return movies;
+    }
 
     public Long getId() {
         return id;

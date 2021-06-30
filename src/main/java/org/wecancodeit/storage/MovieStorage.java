@@ -1,8 +1,10 @@
 package org.wecancodeit.storage;
 
 import org.springframework.stereotype.Service;
+import org.wecancodeit.pojos.Comment;
 import org.wecancodeit.pojos.Hashtags;
 import org.wecancodeit.pojos.Movie;
+import org.wecancodeit.repository.CommentRepository;
 import org.wecancodeit.repository.HashtagRepository;
 import org.wecancodeit.repository.MovieRepository;
 
@@ -15,10 +17,12 @@ public class MovieStorage {
 
     private MovieRepository movieRepository;
     private HashtagRepository hashtagRepository;
+    private CommentRepository commentRepository;
 
-    public MovieStorage(MovieRepository movieRepository, HashtagRepository hashtagRepository) {
+    public MovieStorage(MovieRepository movieRepository, HashtagRepository hashtagRepository, CommentRepository commentRepository) {
         this.movieRepository = movieRepository;
         this.hashtagRepository = hashtagRepository;
+        this.commentRepository = commentRepository;
     }
 
     //METHODS BELOW
@@ -48,6 +52,18 @@ public class MovieStorage {
         movieRepository.save(movieToUpdate);
 
     }
+
+    public void addCommentToMovie(String userComment, String title){
+
+
+        Movie movieToUpdate = movieRepository.findByTitle(title);
+        Comment commentToAdd = new Comment(userComment, movieToUpdate);
+
+
+        commentRepository.save(commentToAdd);
+    }
+
+
 
     public Movie retrieveMovieByTitle(String title) {
         return movieRepository.findByTitle(title);

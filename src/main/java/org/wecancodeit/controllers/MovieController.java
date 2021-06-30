@@ -37,6 +37,18 @@ public class MovieController {
         return "all-movies";
     }
 
+    @PostMapping("/add-comment")
+    public String addComment(Model model, @RequestParam String userComment,
+                                                        String title){
+        movieStorage.addCommentToMovie(userComment, title);
+
+        Movie movieToReturnTo = movieStorage.retrieveMovieByTitle(title);
+        model.addAttribute("movie", movieToReturnTo);
+
+        return "single-review";
+    }
+
+
     @RequestMapping("movies/{title}")
     public String displaySingleMovie(Model model, @PathVariable String title) {
 
