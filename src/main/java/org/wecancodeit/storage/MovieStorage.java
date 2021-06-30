@@ -8,6 +8,8 @@ import org.wecancodeit.repository.MovieRepository;
 
 import java.util.Collection;
 
+
+
 @Service
 public class MovieStorage {
 
@@ -31,17 +33,15 @@ public class MovieStorage {
             System.out.println("The hashtag did not exist.");
         }
 
+        tagToAdd = hashtagRepository.findByHashName(userHashtag);
+
         Collection<Hashtags> tagsToModify = movieToUpdate.getHashtags();
 
         tagsToModify.add(tagToAdd);
 
-        movieToUpdate.setHashtags(tagsToModify);
-
         movieRepository.save(movieToUpdate);
 
-
     }
-
 
     public Movie retrieveMovieByTitle(String title) {
         return movieRepository.findByTitle(title);

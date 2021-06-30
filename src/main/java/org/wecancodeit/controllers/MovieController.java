@@ -64,14 +64,7 @@ public class MovieController {
         return "single-review";
     }
 
-
-
-
-
-
-
-
-    @PostMapping("/add-hashtag/{title}")
+@PostMapping("/add-hashtag/{title}")
     public String addHashtagToMovie(Model model, @RequestParam String hashtag, @PathVariable String title) {
 
         movieStorage.addHashtagToMovie(hashtag, title);

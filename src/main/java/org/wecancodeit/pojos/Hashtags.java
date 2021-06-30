@@ -11,7 +11,7 @@ public class Hashtags {
     private Long id;
     private String hashName;
 
-    @ManyToMany(mappedBy = "hashtags", cascade = {CascadeType.ALL})
+    @ManyToMany(mappedBy = "hashtags")
     private Set<Movie> movies;
 
 
@@ -34,5 +34,7 @@ public class Hashtags {
     public Set<Movie> getMovies() {
         return movies;
     }
+
+
 
 }
