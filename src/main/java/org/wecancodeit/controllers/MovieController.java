@@ -13,6 +13,7 @@ import org.wecancodeit.storage.MovieStorage;
 
 import java.util.Collection;
 import java.util.Locale;
+import java.util.Optional;
 
 @Controller
 public class MovieController {
@@ -78,6 +79,8 @@ public class MovieController {
         return "single-review";
     }
 
+
+
 @RequestMapping("/hashtags")
     public String displayAllHashtags(Model model) {
 
@@ -89,14 +92,21 @@ public class MovieController {
 
     }
 
-    @RequestMapping("/hashtags/{hashtag}")
-    public String displaySingleHashTag(Model model, @PathVariable String hashtag) {
 
-        Hashtags hashtagToDisplay = hashtagRepository.findByHashName(hashtag);
+
+
+
+    @RequestMapping("/hashtags/{id}")
+    public String displaySingleHashTag(Model model, @PathVariable Long id) {
+
+        Hashtags hashtagToDisplay = hashtagRepository.findById(id).get();
+
 
         model.addAttribute("hashtag", hashtagToDisplay);
 
         return "single-hashtag";
     }
+
+
 
 }

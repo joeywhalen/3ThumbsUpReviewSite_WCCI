@@ -13,5 +13,4 @@ public interface HashtagRepository extends CrudRepository<Hashtags, Long> {
 
 
 
-
 }

@@ -41,12 +41,12 @@
 
         <div class="main-content">
 
-            <div th:each="hashtag:${hashtags}" class="hashtag-page">
+            <div th:each="hashtag:${hashtags}">
 
-                <h3 th:text="${hashtag.hashName}">
+                <h3>
 
-                    <a th:href="'/hashtags/' + ${hashtag.hashName}">
-                        #CarChase
+                    <a th:text="${hashtag.hashName}"  th:href="'/hashtags/' + ${hashtag.id}">
+                        TEMP PLACE HOLDER
                     </a>
 
                 </h3>
