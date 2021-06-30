@@ -30,12 +30,16 @@ public class Movie {
     @ManyToMany
     private Collection<Hashtags> hashtags;
 
+    @OneToMany(mappedBy= "movies")
+    private Collection<Comment> comments;
+
     protected Movie() {
 
     }
 
+
     public Movie(String title, String posterUrl, String trailerUrl, int releaseDate, String mpaaRating,
-                 boolean dateMovie, String description, int starRating, Genre genre, Hashtags... hashtags) {
+                 boolean dateMovie, String description, int starRating, Genre genre, Comment comments, Hashtags... hashtags) {
         this.title = title;
         this.posterUrl = posterUrl;
         this.trailerUrl = trailerUrl;
