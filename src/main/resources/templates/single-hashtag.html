@@ -41,15 +41,24 @@
 
         <div class="main-content">
 
-            <div th:each="hashtag:${hashtags}" class="hashtag-page">
 
-                <h3 th:text="${hashtag.hashName}">
+            <h3 th:text="${hashtag.hashName}">HASHTAG TITLE</h3>
 
-                    <a th:href="'/hashtags/' + ${hashtag.hashName}">
-                        #CarChase
+            <div class="hashtag-page">
+
+
+                <div class="single-movie" th:each="movie:${hashtag.movies}">
+
+                    <a th:href="'/movies/' + ${movie.title}" class="movie-link">
+
+                        <h2 th:text="${movie.title}">Bullitt</h2>
+
+                        <img class="movie-icon" th:src="${movie.posterUrl}" alt="Bullitt Movie Poster">
+
                     </a>
 
-                </h3>
+                </div>
+
 
             </div>
 
