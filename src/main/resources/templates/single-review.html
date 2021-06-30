@@ -119,7 +119,9 @@
             <div class="hashtag">
 
                 <div th:each="hashtag:${movie.getHashtags()}">
-                    <h3 th:text="${hashtag.hashName}">#CarChase</h3>
+                    <h3>
+                    <a th:text="${hashtag.hashName}" th:href="'/hashtags/' + ${hashtag.id}">#CarChase</a>
+                    </h3>
                 </div>
 
                 <form th:action="'../add-hashtag/' + ${movie.title}" method="POST">
