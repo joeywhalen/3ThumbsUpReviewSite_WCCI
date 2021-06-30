@@ -110,16 +110,16 @@
                     </div>
 
                     <div class="comments">
-                    <form action="../add-comment/" method="POST">
+                        <form action="../add-comment/" method="POST">
 
-                        <label for="comment">Enter a new comment:</label>
-                        <input type="text" id="comment" name="userComment" placeholder="Comment here...">
-                        <input type="hidden" th:value="${movie.title}" name="title" />
+                            <label for="comment">Enter a new comment:</label>
+                            <input type="text" id="comment" name="userComment" placeholder="Comment here...">
+                            <input type="hidden" th:value="${movie.title}" name="title" />
 
-                        <br>
+                            <br>
 
-                        <input type="submit" value="Submit">
-                    </form>
+                            <input type="submit" value="Submit">
+                        </form>
                     </div>
 
 
@@ -134,11 +134,18 @@
 
                 <div th:each="hashtag:${movie.getHashtags()}">
                     <h3>
-                    <a th:text="${hashtag.hashName}" th:href="'/hashtags/' + ${hashtag.id}">#CarChase</a>
+                        <a th:text="${hashtag.hashName}" th:href="'/hashtags/' + ${hashtag.id}">#CarChase</a>
                     </h3>
                 </div>
 
+                <form th:action="'../add-hashtag/' + ${movie.title}" method="POST">
 
+                    <label for="hashtag">Enter a new hashtag</label>
+                    <input type="text" id="hashtag" name="hashtag" placeholder="#HashTag here...">
+                    <br>
+
+                    <input type="submit" value="Submit">
+                </form>
 
             </div>
 
