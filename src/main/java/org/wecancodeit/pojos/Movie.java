@@ -30,7 +30,7 @@ public class Movie {
     @ManyToMany
     private Collection<Hashtags> hashtags;
 
-    public Movie() {
+    protected Movie() {
 
     }
 

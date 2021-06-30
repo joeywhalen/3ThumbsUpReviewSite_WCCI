@@ -11,6 +11,4 @@ public interface HashtagRepository extends CrudRepository<Hashtags, Long> {
 
     Hashtags findByHashName(String hashName);
 
-
-
 }

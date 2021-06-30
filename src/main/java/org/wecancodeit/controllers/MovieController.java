@@ -99,8 +99,8 @@ public class MovieController {
     @RequestMapping("/hashtags/{id}")
     public String displaySingleHashTag(Model model, @PathVariable Long id) {
 
-        Hashtags hashtagToDisplay = hashtagRepository.findById(id).get();
 
+        Hashtags hashtagToDisplay = movieStorage.retrieveHashtagByID(id);
 
         model.addAttribute("hashtag", hashtagToDisplay);
 
