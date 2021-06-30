@@ -15,8 +15,13 @@ public class Comment {
     @ManyToOne
     private Movie movies;
 
-    public Comment(String comment) {
+    public Movie getMovies() {
+        return movies;
+    }
+
+    public Comment(String comment, Movie movies) {
         this.comment = comment;
+        this.movies = movies;
     }
 
     protected Comment(){

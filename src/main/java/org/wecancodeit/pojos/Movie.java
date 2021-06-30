@@ -39,7 +39,7 @@ public class Movie {
 
 
     public Movie(String title, String posterUrl, String trailerUrl, int releaseDate, String mpaaRating,
-                 boolean dateMovie, String description, int starRating, Genre genre, Collection<Comment> comments, Hashtags... hashtags) {
+                 boolean dateMovie, String description, int starRating, Genre genre, Hashtags... hashtags) {
         this.title = title;
         this.posterUrl = posterUrl;
         this.trailerUrl = trailerUrl;
@@ -50,7 +50,7 @@ public class Movie {
         this.starRating = starRating;
         this.genre = genre;
         this.hashtags = Set.of(hashtags);
-        this.comments = comments;
+
     }
 
     public Long getId() {
