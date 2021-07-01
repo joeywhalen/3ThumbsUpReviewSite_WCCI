@@ -150,9 +150,11 @@
 
                 <div class="hashtag-text">
                 <div th:each="hashtag:${movie.getHashtags()}">
+
                     <h3>
                         <a th:text="${hashtag.hashName}" th:href="'/hashtags/' + ${hashtag.id}">#CarChase</a>
                     </h3>
+
                 </div>
                 </div>
 

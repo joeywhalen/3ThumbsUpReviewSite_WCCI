@@ -37,12 +37,25 @@ public class Populator implements CommandLineRunner {
         Hashtags hashFour = new Hashtags("#Slasher");
         Hashtags hashFive = new Hashtags("#Violent");
         Hashtags hashSix = new Hashtags("#Funny");
+
+        Hashtags hash7 = new Hashtags("#Slapstick");
+        Hashtags hash8 = new Hashtags("#Violent");
+        Hashtags hash9 = new Hashtags("#Spooky");
+        Hashtags hash10 = new Hashtags("#Boring");
+        Hashtags hash11 = new Hashtags("#LoveStory");
+        Hashtags hash12 = new Hashtags("#Vampires");
         hashtagRepository.save(hashOne);
         hashtagRepository.save(hashTwo);
         hashtagRepository.save(hashThree);
         hashtagRepository.save(hashFour);
         hashtagRepository.save(hashFive);
         hashtagRepository.save(hashSix);
+        hashtagRepository.save(hash7);
+        hashtagRepository.save(hash8);
+        hashtagRepository.save(hash9);
+        hashtagRepository.save(hash10);
+        hashtagRepository.save(hash11);
+        hashtagRepository.save(hash12);
 
 
 

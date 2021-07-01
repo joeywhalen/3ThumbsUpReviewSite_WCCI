@@ -62,41 +62,16 @@
 
     <div class="hashtag">
 
-        <div class="hashtag-text">
-            <h3>#CarChase</h3>
-            <h3>#BuddyMovie</h3>
-            <h3>#Slasher</h3>
-            <h3>#Cheesy</h3>
-            <h3>#CarChase</h3>
-            <h3>#BuddyMovie</h3>
-            <h3>#Slasher</h3>
-            <h3>#Cheesy</h3>
-            <h3>#CarChase</h3>
-            <h3>#BuddyMovie</h3>
-            <h3>#Slasher</h3>
-            <h3>#Cheesy</h3>
-            <h3>#CarChase</h3>
-            <h3>#BuddyMovie</h3>
-            <h3>#Slasher</h3>
-            <h3>#Cheesy</h3>
-            <h3>#CarChase</h3>
-            <h3>#BuddyMovie</h3>
-            <h3>#Slasher</h3>
-            <h3>#Cheesy</h3>
-            <h3>#CarChase</h3>
-            <h3>#BuddyMovie</h3>
-            <h3>#Slasher</h3>
-            <h3>#Cheesy</h3>
-            <h3>#CarChase</h3>
-            <h3>#BuddyMovie</h3>
-            <h3>#Slasher</h3>
-            <h3>#Cheesy</h3>
-            <h3>#CarChase</h3>
-            <h3>#BuddyMovie</h3>
-            <h3>#Slasher</h3>
-            <h3>#Cheesy</h3>
-        </div>
+        <div th:each="hashtag,hashStat : ${hashtags}" th:if="${hashStat.count} < 7">
 
+
+                <div th:if="${hashStat.count} < 7" th:text="${hashtag.hashName}">
+                    <div class="hashtag-text">
+                    #HashTag
+                    </div>
+                </div>
+
+        </div>
 
     </div>
 

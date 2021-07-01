@@ -41,18 +41,25 @@
 
         <div class="main-content">
 
-            <div th:each="hashtag:${hashtags}">
+            <div class="hashtag-body">
+                <div>
+                    <h1>All Hashtags</h1>
+                </div>
 
-                <h3>
+                <div class="all-hashtags">
+                    <div th:each="hashtag:${hashtags}">
 
-                    <a th:text="${hashtag.hashName}"  th:href="'/hashtags/' + ${hashtag.id}">
-                        TEMP PLACE HOLDER
-                    </a>
+                        <h3>
 
-                </h3>
+                            <a th:text="${hashtag.hashName}" th:href="'/hashtags/' + ${hashtag.id}">
+                                TEMP PLACE HOLDER
+                            </a>
 
+                        </h3>
+
+                    </div>
+                </div>
             </div>
-
         </div>
 
         <div class="right-curtain"></div>
