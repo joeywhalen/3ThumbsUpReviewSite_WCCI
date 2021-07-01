@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/layout.css">
         <link rel="stylesheet" href="../css/style.css">
+
+        <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
     </head>
 
     <body>
@@ -110,6 +112,19 @@
                     </div>
 
                     <div class="comments">
+
+                        <div class="comment-container">
+
+                            <div th:eaach class="user-comment">
+
+                                WHITE COMMENT BOX HERE
+
+                            </div>
+
+
+                        </div>
+
+
                         <form action="../add-comment/" method="POST">
 
                             <label for="comment">Enter a new comment:</label>
@@ -132,20 +147,24 @@
 
             <div class="hashtag">
 
+                <div class="hashtag-text">
                 <div th:each="hashtag:${movie.getHashtags()}">
                     <h3>
                         <a th:text="${hashtag.hashName}" th:href="'/hashtags/' + ${hashtag.id}">#CarChase</a>
                     </h3>
                 </div>
+                </div>
 
+                <div class="hashtag-form">
                 <form th:action="'../add-hashtag/' + ${movie.title}" method="POST">
 
-                    <label for="hashtag">Enter a new hashtag:</label>
+                    <label class="form-text" for="hashtag">Enter a new hashtag:</label>
                     <input type="text" id="hashtag" name="hashtag" placeholder="#HashTag here...">
                     <br>
 
                     <input type="submit" value="Submit">
                 </form>
+                </div>
 
             </div>
 

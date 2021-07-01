@@ -1,113 +1,110 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Action Genres</title>
-        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/layout.css">
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Action Genres</title>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
 
-    <body>
-        <div class="container">
-
-
-            <div class="header">
-                <div class="overlay-layer">
-
-                    <div class="logo">
-                        <img src="/images/test-logo.png">
-                    </div>
-                    <div class="nav-bar">
-                        <div><a class="nav-link" href="/genres">All Genres</a></div>
-                        <div><a class="nav-link" href="/add-review.html">Submit Review</a></div>
-                        <div><a class="nav-link" href="/hashtags">Hashtags</a></div>
-                        <!-- <div class="item"><a href="#">Link 4</a></div> -->
-                    </div>
+<body>
+<div class="container">
 
 
+    <div class="header">
+        <div class="overlay-layer">
+
+            <div class="logo">
+                <img src="/images/test-logo.png">
+            </div>
+            <div class="nav-bar">
+                <div><a class="nav-link" href="/genres">All Genres</a></div>
+                <div><a class="nav-link" href="/add-review.html">Submit Review</a></div>
+                <div><a class="nav-link" href="/hashtags">Hashtags</a></div>
+                <!-- <div class="item"><a href="#">Link 4</a></div> -->
+            </div>
+
+
+        </div>
+        <div class="movie-strip"></div>
+
+    </div>
+
+    <div class="main-content-container">
+        <div class="left-curtain"></div>
+        <div class="main-content">
+
+
+            <div class="action-genre-movies">
+                <div class="single-movie" th:each="movie:${genre.movies}">
+                    <a th:href="'/movies/' + ${movie.title}" class="movie-link">
+                        <h2 th:text="${movie.title}">Bullitt</h2>
+                        <img class="movie-icon" th:src="${movie.posterUrl}" alt="Bullitt Movie Poster">
+                    </a>
                 </div>
-                <div class="movie-strip"></div>
-
-            </div>
-
-            <div class="main-content-container">
-                <div class="left-curtain"></div>
-                <div class="main-content">
-
-
-                    <div class="action-genre-movies">
-                        <div class="single-movie" th:each="movie:${genre.movies}">
-                            <a th:href="'/movies/' + ${movie.title}" class="movie-link">
-                                <h2 th:text="${movie.title}">Bullitt</h2>
-                                <img class="movie-icon" th:src="${movie.posterUrl}" alt="Bullitt Movie Poster">
-                            </a>
-                        </div>
-
-                    </div>
-
-
-
-
-
-                </div>
-                <div class="right-curtain"></div>
-            </div>
-
-
-
-            <div class="hashtag">
-
-
-                <h3>#CarChase</h3>
-                <h3>#BuddyMovie</h3>
-                <h3>#Slasher</h3>
-                <h3>#Cheesy</h3>
-                <h3>#CarChase</h3>
-                <h3>#BuddyMovie</h3>
-                <h3>#Slasher</h3>
-                <h3>#Cheesy</h3>
-                <h3>#CarChase</h3>
-                <h3>#BuddyMovie</h3>
-                <h3>#Slasher</h3>
-                <h3>#Cheesy</h3>
-                <h3>#CarChase</h3>
-                <h3>#BuddyMovie</h3>
-                <h3>#Slasher</h3>
-                <h3>#Cheesy</h3>
-                <h3>#CarChase</h3>
-                <h3>#BuddyMovie</h3>
-                <h3>#Slasher</h3>
-                <h3>#Cheesy</h3>
-                <h3>#CarChase</h3>
-                <h3>#BuddyMovie</h3>
-                <h3>#Slasher</h3>
-                <h3>#Cheesy</h3>
-                <h3>#CarChase</h3>
-                <h3>#BuddyMovie</h3>
-                <h3>#Slasher</h3>
-                <h3>#Cheesy</h3>
-                <h3>#CarChase</h3>
-                <h3>#BuddyMovie</h3>
-                <h3>#Slasher</h3>
-                <h3>#Cheesy</h3>
-
 
             </div>
 
 
-            <div class="footer">
-                <div class="movie-strip"></div>
-                <small>3 Thumbs Up Movie Reviews, WCCI 2021</small>
-            </div>
+        </div>
+        <div class="right-curtain"></div>
+    </div>
 
+
+    <div class="hashtag">
+
+        <div class="hashtag-text">
+            <h3>#CarChase</h3>
+            <h3>#BuddyMovie</h3>
+            <h3>#Slasher</h3>
+            <h3>#Cheesy</h3>
+            <h3>#CarChase</h3>
+            <h3>#BuddyMovie</h3>
+            <h3>#Slasher</h3>
+            <h3>#Cheesy</h3>
+            <h3>#CarChase</h3>
+            <h3>#BuddyMovie</h3>
+            <h3>#Slasher</h3>
+            <h3>#Cheesy</h3>
+            <h3>#CarChase</h3>
+            <h3>#BuddyMovie</h3>
+            <h3>#Slasher</h3>
+            <h3>#Cheesy</h3>
+            <h3>#CarChase</h3>
+            <h3>#BuddyMovie</h3>
+            <h3>#Slasher</h3>
+            <h3>#Cheesy</h3>
+            <h3>#CarChase</h3>
+            <h3>#BuddyMovie</h3>
+            <h3>#Slasher</h3>
+            <h3>#Cheesy</h3>
+            <h3>#CarChase</h3>
+            <h3>#BuddyMovie</h3>
+            <h3>#Slasher</h3>
+            <h3>#Cheesy</h3>
+            <h3>#CarChase</h3>
+            <h3>#BuddyMovie</h3>
+            <h3>#Slasher</h3>
+            <h3>#Cheesy</h3>
         </div>
 
 
-    </body>
+    </div>
+
+
+    <div class="footer">
+        <div class="movie-strip"></div>
+        <small>3 Thumbs Up Movie Reviews, WCCI 2021</small>
+    </div>
+
+</div>
+
+
+</body>
 
 </html>
