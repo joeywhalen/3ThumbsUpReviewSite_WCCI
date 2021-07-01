@@ -437,12 +437,11 @@ a.movie-link:hover {
 /* -------------------------------------- */
 /* FORMS  */
 /* -------------------------------------- */
-.comment-container {
+.comment-container {}
 
-}
-
-.user-comment{
-  background-color: white;
+.user-comment {
+  background-color: khaki;
+  /* background-color: white; */
   border-style: solid;
   border-width: 1px;
   border-radius: 6px;
@@ -452,12 +451,12 @@ a.movie-link:hover {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.486);
 }
 
-.user-comment p{
+.user-comment p {
   font-family: 'Lato', 'Arial', sans-serif;
   color: black;
 }
 
-.comment-form{
+.comment-form {
   max-width: 300px;
   margin: auto;
 }
