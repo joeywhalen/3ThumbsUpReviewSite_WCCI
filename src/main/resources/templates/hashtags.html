@@ -1,57 +1,57 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>All Hashtags</title>
-    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/layout.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>All Hashtags</title>
+        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/layout.css">
+    </head>
 
-<body>
-<div class="container">
+    <body>
+        <div class="container">
 
-    <div class="header">
-        <div class="overlay-layer">
+            <div class="header">
+                <div class="overlay-layer">
 
-            <div class="logo">
-                <img src="/images/test-logo.png">
-            </div>
-            <div class="nav-bar">
-                <div><a class="nav-link" href="/genres">All Genres</a></div>
-                <div><a class="nav-link" href="/add-review.html">Submit Review</a></div>
-                <div><a class="nav-link" href="/hashtags">Hashtags</a></div>
-                <!-- <div class="item"><a href="#">Link 4</a></div> -->
-            </div>
-
-
-        </div>
-        <div class="movie-strip"></div>
-
-    </div>
-
-    <div class="main-content-container">
+                    <div class="logo">
+                        <img src="/images/test-logo.png">
+                    </div>
+                    <div class="nav-bar">
+                        <div><a class="nav-link" href="/genres">All Genres</a></div>
+                        <div><a class="nav-link" href="/add-review.html">Submit Review</a></div>
+                        <div><a class="nav-link" href="/hashtags">Hashtags</a></div>
+                        <!-- <div class="item"><a href="#">Link 4</a></div> -->
+                    </div>
 
 
-        <div class="left-curtain"></div>
-
-        <div class="main-content">
-
-            <div class="hashtag-body">
-                <div>
-                    <h1>All Hashtags</h1>
                 </div>
+                <div class="movie-strip"></div>
 
-                <div class="all-hashtags">
+            </div>
 
-                    ${#lists.toList(object)}
+            <div class="main-content-container">
 
 
-                    <div th:each="hashtag : ${#lists.sort(hashtags)}">
+                <div class="left-curtain"></div>
+
+                <div class="main-content">
+
+                    <div class="hashtag-body">
+                        <div>
+                            <h1>All Hashtags</h1>
+                        </div>
+
+                        <div class="all-hashtags">
+
+                            <!-- ${#lists.toList(object)} -->
+
+
+                    <div th:each="hashtag : ${hashtags}">
 
                         <h3>
 
