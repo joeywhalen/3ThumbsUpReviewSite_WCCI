@@ -47,7 +47,11 @@
                 </div>
 
                 <div class="all-hashtags">
-                    <div th:each="hashtag:${hashtags}">
+
+                    ${#lists.toList(object)}
+
+
+                    <div th:each="hashtag : ${#lists.sort(hashtags)}">
 
                         <h3>
 
