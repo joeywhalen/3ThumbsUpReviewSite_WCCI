@@ -14,7 +14,6 @@ public class Hashtags {
     @ManyToMany(mappedBy = "hashtags")
     private Set<Movie> movies;
 
-
     public Hashtags(String hashName) {
         this.hashName = hashName;
     }
@@ -34,7 +33,5 @@ public class Hashtags {
     public Set<Movie> getMovies() {
         return movies;
     }
-
-
 
 }

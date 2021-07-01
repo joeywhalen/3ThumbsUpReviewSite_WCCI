@@ -37,7 +37,6 @@ public class Movie {
 
     }
 
-
     public Movie(String title, String posterUrl, String trailerUrl, int releaseDate, String mpaaRating,
                  boolean dateMovie, String description, int starRating, Genre genre, Hashtags... hashtags) {
         this.title = title;

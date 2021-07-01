@@ -48,7 +48,6 @@ public class MovieController {
         return "single-review";
     }
 
-
     @RequestMapping("movies/{title}")
     public String displaySingleMovie(Model model, @PathVariable String title) {
 
@@ -57,7 +56,6 @@ public class MovieController {
 
         return "single-review";
     }
-
 
     @PostMapping("/addreview")
     public String addMovieReview(Model model,
@@ -78,12 +76,10 @@ public class MovieController {
         return "single-review";
     }
 
-@PostMapping("/add-hashtag/{title}")
+    @PostMapping("/add-hashtag/{title}")
     public String addHashtagToMovie(Model model, @RequestParam String hashtag, @PathVariable String title) {
 
         movieStorage.addHashtagToMovie(hashtag, title);
-
-
 
         Movie movieToModify = movieStorage.retrieveMovieByTitle(title);
         model.addAttribute("movie", movieToModify);
@@ -91,9 +87,7 @@ public class MovieController {
         return "single-review";
     }
 
-
-
-@RequestMapping("/hashtags")
+    @RequestMapping("/hashtags")
     public String displayAllHashtags(Model model) {
 
         Iterable<Hashtags> allHashtags = movieStorage.retrieveAllHashtags();
@@ -104,13 +98,8 @@ public class MovieController {
 
     }
 
-
-
-
-
     @RequestMapping("/hashtags/{id}")
     public String displaySingleHashTag(Model model, @PathVariable Long id) {
-
 
         Hashtags hashtagToDisplay = movieStorage.retrieveHashtagByID(id);
 
@@ -118,7 +107,4 @@ public class MovieController {
 
         return "single-hashtag";
     }
-
-
-
 }

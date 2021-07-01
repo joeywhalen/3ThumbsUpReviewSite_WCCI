@@ -10,8 +10,6 @@ import org.wecancodeit.repository.MovieRepository;
 
 import java.util.Collection;
 
-
-
 @Service
 public class MovieStorage {
 
@@ -55,15 +53,11 @@ public class MovieStorage {
 
     public void addCommentToMovie(String userComment, String title){
 
-
         Movie movieToUpdate = movieRepository.findByTitle(title);
         Comment commentToAdd = new Comment(userComment, movieToUpdate);
 
-
         commentRepository.save(commentToAdd);
     }
-
-
 
     public Movie retrieveMovieByTitle(String title) {
         return movieRepository.findByTitle(title);
@@ -89,6 +83,5 @@ public class MovieStorage {
     public Iterable<Hashtags> retrieveAllHashtags() {
         return hashtagRepository.findAll();
     }
-
 
 }
