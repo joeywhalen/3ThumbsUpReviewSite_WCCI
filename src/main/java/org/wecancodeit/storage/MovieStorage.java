@@ -59,6 +59,10 @@ public class MovieStorage {
         commentRepository.save(commentToAdd);
     }
 
+    public Iterable<Comment> retrieveCommentsFromMovie(String title){
+        return movieRepository.findByTitle(title).getComments();
+    }
+
     public Movie retrieveMovieByTitle(String title) {
         return movieRepository.findByTitle(title);
     }
@@ -85,3 +89,4 @@ public class MovieStorage {
     }
 
 }
+

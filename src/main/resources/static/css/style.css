@@ -538,6 +538,10 @@ input:focus,
 /* FORMS  */
 /* -------------------------------------- */
 .comment-container {
+
+}
+
+.user-comment{
   background-color: white;
   border-style: solid;
   border-width: 1px;
@@ -546,8 +550,6 @@ input:focus,
   margin-bottom: 20px;
   margin-top: 20px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.486);
-
-
 }
 
 .user-comment p{

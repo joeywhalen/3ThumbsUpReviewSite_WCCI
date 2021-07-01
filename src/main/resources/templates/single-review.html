@@ -115,8 +115,8 @@
 
                         <div class="comment-container">
 
-                            <div th:eaach class="user-comment">
-                                <p>This movie was awesome and cool! Would watch again!</p>
+                            <div th:each="comment:${movie.comments}" class="user-comment">
+                                <p th:text="'&quot;' + ${comment.comment} + '&quot;'">This movie was awesome and cool! Would watch again!</p>
                                
 
                             </div>

@@ -100,6 +100,10 @@ public class Movie {
         this.hashtags = hashtags;
     }
 
+    public Collection<Comment> getComments() {
+        return comments;
+    }
+
     @Override
     public String toString() {
         return "Movie{" +

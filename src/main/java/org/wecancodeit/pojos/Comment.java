@@ -10,13 +10,13 @@ public class Comment {
     @Id
     @GeneratedValue
     private Long id;
-    private String comment;
+    private String userComment;
 
     @ManyToOne
     private Movie movies;
 
-    public Comment(String comment, Movie movies) {
-        this.comment = comment;
+    public Comment(String userComment, Movie movies) {
+        this.userComment = userComment;
         this.movies = movies;
     }
 
@@ -33,6 +33,6 @@ public class Comment {
     }
 
     public String getComment() {
-        return comment;
+        return userComment;
     }
 }
