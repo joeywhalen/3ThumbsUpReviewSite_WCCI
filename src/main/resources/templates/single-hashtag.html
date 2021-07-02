@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SINGLE HASHTAG</title>
+    <title th:text="${hashtag.hashName}">3 Thumbs Up! Hashtag</title>
     <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -41,25 +41,29 @@
 
         <div class="main-content">
 
+            <div class="single-hash-content">
 
-            <h3 th:text="${hashtag.hashName}">HASHTAG TITLE</h3>
-
-            <div class="hashtag-page">
-
-
-                <div class="single-movie" th:each="movie:${hashtag.movies}">
-
-                    <a th:href="'/movies/' + ${movie.title}" class="movie-link">
-
-                        <h2 th:text="${movie.title}">Bullitt</h2>
-
-                        <img class="movie-icon" th:src="${movie.posterUrl}" alt="Bullitt Movie Poster">
-
-                    </a>
-
+                <div class="hash-title">
+                    <h3 th:text="${hashtag.hashName}">HASHTAG TITLE</h3>
                 </div>
 
+                <div class="hashtag-page">
 
+
+                    <div class="single-movie" th:each="movie:${hashtag.movies}">
+
+                        <a th:href="'/movies/' + ${movie.title}" class="movie-link">
+
+                            <h2 th:text="${movie.title}">Bullitt</h2>
+
+                            <img class="movie-icon" th:src="${movie.posterUrl}" alt="Bullitt Movie Poster">
+
+                        </a>
+
+                    </div>
+
+
+                </div>
             </div>
 
         </div>

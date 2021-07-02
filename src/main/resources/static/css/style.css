@@ -375,6 +375,12 @@ a.movie-link:hover {
   padding-right: 15px;
 }
 
+.single-hash-content {
+  display: flex;
+  flex-direction: column;
+}
+
+
 /* -------------------------------------- */
 /* FOOTER */
 /* -------------------------------------- */
