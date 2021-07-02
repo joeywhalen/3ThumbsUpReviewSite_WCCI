@@ -9,6 +9,7 @@ import org.wecancodeit.repository.HashtagRepository;
 import org.wecancodeit.repository.MovieRepository;
 
 import java.util.Collection;
+import java.util.Collections;
 
 @Service
 public class MovieStorage {
@@ -28,7 +29,6 @@ public class MovieStorage {
     public Hashtags retrieveHashtagByID(Long id) {
         return hashtagRepository.findById(id).get();
     }
-
 
     public void addHashtagToMovie(String userHashtag, String title) {
 
