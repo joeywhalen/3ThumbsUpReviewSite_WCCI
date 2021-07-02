@@ -330,6 +330,12 @@ a.movie-link:hover {
   height: auto;
 }
 
+.single-movie {
+  display: flex;
+  padding: 30px;
+  max-width: 125px;
+}
+
 /* -------------------------------------- */
 /* HASHTAG */
 /* -------------------------------------- */
@@ -378,18 +384,35 @@ a.movie-link:hover {
 .single-hash-content {
   display: flex;
   flex-direction: column;
+  width: 80%;
 }
 
 .hash-title {
+  display: flex;
   font-size: 30px;
   margin-bottom: 35px;
   color: white;
   background-color: darkred;
   padding: 20px;
   border-radius: 4px;
-
+  justify-content: space-around;
 }
 
+.hashtag-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.hashtag-page div {
+  display: flex;
+}
+
+.movie-link h2 {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 /* -------------------------------------- */
 /* FOOTER */
@@ -421,18 +444,10 @@ a.movie-link:hover {
 }
 
 .action-genre-movies {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* text-decoration: none; */
-  /* column-gap: 200px;
-  row-gap: 25px;
-  margin-top: 325px;
-  margin-bottom: 50px; */
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* -------------------------------------- */
-/* JOEYS ADDITIONS END  */
-/* -------------------------------------- */
 
 /* -------------------------------------- */
 /* CURTAINS  */
