@@ -380,6 +380,16 @@ a.movie-link:hover {
   flex-direction: column;
 }
 
+.hash-title {
+  font-size: 30px;
+  margin-bottom: 35px;
+  color: white;
+  background-color: darkred;
+  padding: 20px;
+  border-radius: 4px;
+
+}
+
 
 /* -------------------------------------- */
 /* FOOTER */
