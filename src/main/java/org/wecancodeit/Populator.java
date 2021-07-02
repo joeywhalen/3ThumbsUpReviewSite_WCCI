@@ -38,24 +38,24 @@ public class Populator implements CommandLineRunner {
         Hashtags hashFive = new Hashtags("#Violent");
         Hashtags hashSix = new Hashtags("#Funny");
 
-        Hashtags hash7 = new Hashtags("#Wait...What?!");
-        Hashtags hash8 = new Hashtags("#SleepWithTheLightsOn");
-        Hashtags hash9 = new Hashtags("#Spooky");
-        Hashtags hash10 = new Hashtags("#Boring");
-        Hashtags hash11 = new Hashtags("#LoveStory");
-        Hashtags hash12 = new Hashtags("#Vampires");
+        Hashtags hashSeven = new Hashtags("#Wait...What?!");
+        Hashtags hashEight = new Hashtags("#SleepWithTheLightsOn");
+        Hashtags hashNine = new Hashtags("#Spooky");
+        Hashtags hashTen = new Hashtags("#Boring");
+        Hashtags hashEleven = new Hashtags("#LoveStory");
+        Hashtags hashTwelve = new Hashtags("#Vampires");
         hashtagRepository.save(hashOne);
         hashtagRepository.save(hashTwo);
         hashtagRepository.save(hashThree);
         hashtagRepository.save(hashFour);
         hashtagRepository.save(hashFive);
         hashtagRepository.save(hashSix);
-        hashtagRepository.save(hash7);
-        hashtagRepository.save(hash8);
-        hashtagRepository.save(hash9);
-        hashtagRepository.save(hash10);
-        hashtagRepository.save(hash11);
-        hashtagRepository.save(hash12);
+        hashtagRepository.save(hashSeven);
+        hashtagRepository.save(hashEight);
+        hashtagRepository.save(hashNine);
+        hashtagRepository.save(hashTen);
+        hashtagRepository.save(hashEleven);
+        hashtagRepository.save(hashTwelve);
 
 
 
@@ -141,7 +141,8 @@ public class Populator implements CommandLineRunner {
                 "            enlists the help of the second frat to get the boys of Delta House off campus. The dean's plan comes into" +
                 "            play just before the homecoming parade to end all parades for all time.",
                 5,
-                comedyGenre);
+                comedyGenre,
+                hashSix);
 
         Movie blazingSaddles = new Movie("Blazing Saddles",
                 "https://m.media-amazon.com/images/I/619D2L7hP7L._AC_.jpg",
@@ -330,7 +331,8 @@ public class Populator implements CommandLineRunner {
                 "Henry Spencer tries to survive his industrial environment, his angry girlfriend, and the\n" +
                         "                    unbearable screams of his newly born mutant child.",
                 4,
-                horrorGenre);
+                horrorGenre,
+                hashSeven);
 
         Movie exorcist = new Movie("The Exorcist",
                 "https://www.funkyzilla.com/ekmps/shops/6bba79/images/the-exorcist-vintage-movie-poster-mouse-mat.-horror-film-novelty-mouse-pad-10239-p.jpg",
@@ -340,7 +342,8 @@ public class Populator implements CommandLineRunner {
                 false,
                 "When a 12-year-old girl is possessed by a mysterious entity, her mother seeks the help of two priests to save her.",
                 5,
-                horrorGenre);
+                horrorGenre,
+                hashEight);
 
         Movie fridayThe13th = new Movie("Friday the 13th",
                 "https://cdn.shopify.com/s/files/1/1416/8662/products/friday_the_13th_1980_linen_original_film_art_f_75457272-c414-4725-8468-82c2a212f77e_1200x.jpg?v=1612308325",
@@ -351,7 +354,8 @@ public class Populator implements CommandLineRunner {
                 "A group of camp counselors are stalked and murdered by an unknown assailant while trying to\n" +
                         "                    reopen a summer camp which was the site of a child's drowning and a grisly double murder years before.",
                 4,
-                horrorGenre);
+                horrorGenre,
+                hashFour,hashFive);
 
         Movie halloween = new Movie("Halloween",
                 "https://cdn.shopify.com/s/files/1/1057/4964/products/halloween-vintage-movie-poster-original-1-sheet-27x41-7260.jpg?v=1602478849",
@@ -362,7 +366,8 @@ public class Populator implements CommandLineRunner {
                 "Fifteen years after murdering his sister on Halloween night 1963, Michael Myers escapes from a\n" +
                         "                    mental hospital and returns to the small town of Haddonfield, Illinois to kill again.",
                 5,
-                horrorGenre);
+                horrorGenre,
+                hashFour,hashFive,hashSix,hashEight);
 
         Movie shining = new Movie("The Shining",
                 "https://images-na.ssl-images-amazon.com/images/I/61cwYyI-c0L._AC_SL1000_.jpg",
@@ -373,7 +378,8 @@ public class Populator implements CommandLineRunner {
                 "A family heads to an isolated hotel for the winter where a sinister presence influences the\n" +
                         "                    father into violence, while his psychic son sees horrific forebodings from both past and future.",
                 4,
-                horrorGenre);
+                horrorGenre,
+                hashFive,hashNine);
 
         Movie texasChainsawMassacre = new Movie("The Texas Chainsaw Massacre",
                 "https://cdn.shopify.com/s/files/1/1416/8662/products/texas_chainsaw_massacre_1974_linen_original_film_art_f_1200x.jpg?v=1620170535",
@@ -384,7 +390,8 @@ public class Populator implements CommandLineRunner {
                 "Two siblings and three of their friends en route to visit their grandfather's grave in Texas fall\n" +
                         "                    victim to a family of cannibalistic psychopaths.",
                 5,
-                horrorGenre);
+                horrorGenre,
+                hashFive,hashEight,hashNine);
 
         Movie alien = new Movie("Alien",
                 "https://m.media-amazon.com/images/I/41ltBoq45nL._AC_.jpg",
@@ -395,7 +402,8 @@ public class Populator implements CommandLineRunner {
                 "After a space merchant vessel receives an unknown transmission as a distress call, one of the\n" +
                         "                    crew is attacked by a mysterious life form and they soon realize that its life cycle has merely begun.",
                 5,
-                suspenseGenre);
+                suspenseGenre,
+                hashNine);
 
         Movie blueVelvet = new Movie("Blue Velvet",
                 "https://images-na.ssl-images-amazon.com/images/I/51q-uVPdv1L._AC_.jpg",
