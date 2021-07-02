@@ -155,7 +155,7 @@ public class Populator implements CommandLineRunner {
                 comedyGenre);
 
         Movie caddyshack = new Movie("Caddyshack",
-                "https://m.media-amazon.com/images/I/71GDGwQnd8L._AC_SS450_.jpg",
+                "https://images-na.ssl-images-amazon.com/images/I/71pY%2BIj78GL._AC_SY879_.jpg",
                 "https://www.youtube.com/embed/x9Nl39uWEYk",
                 1988,
                 "R",
@@ -367,7 +367,7 @@ public class Populator implements CommandLineRunner {
                         "                    mental hospital and returns to the small town of Haddonfield, Illinois to kill again.",
                 5,
                 horrorGenre,
-                hashFour,hashFive,hashSix,hashEight);
+                hashFour,hashFive,hashEight);
 
         Movie shining = new Movie("The Shining",
                 "https://images-na.ssl-images-amazon.com/images/I/61cwYyI-c0L._AC_SL1000_.jpg",

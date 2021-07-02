@@ -1,186 +1,199 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>3 Thumbs Up - Movie Reviews!</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3 Thumbs Up - Movie Reviews!</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/layout.css">
-        <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/style.css">
 
-        <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
-    </head>
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
+</head>
 
-    <body>
-        <div class="container">
-
-
-            <div class="header">
-                <div class="overlay-layer">
-
-                    <div class="logo">
-                        <img src="/images/logo-02.png">
-                    </div>
-                    <div class="nav-bar">
-                        <div><a class="nav-link" href="/genres">All Genres</a></div>
-                        <div><a class="nav-link" href="/add-review.html">Submit Review</a></div>
-                        <div><a class="nav-link" href="/hashtags">Hashtags</a></div>
-                        <!-- <div class="item"><a href="#">Link 4</a></div> -->
-                    </div>
+<body>
+<div class="container">
 
 
-                </div>
-                <div class="movie-strip"></div>
+    <div class="header">
+        <div class="overlay-layer">
 
+            <div class="logo">
+                <img src="/images/logo-02.png">
+            </div>
+            <div class="nav-bar">
+                <div><a class="nav-link" href="/genres">All Genres</a></div>
+                <div><a class="nav-link" href="/add-review.html">Submit Review</a></div>
+                <div><a class="nav-link" href="/hashtags">Hashtags</a></div>
+                <!-- <div class="item"><a href="#">Link 4</a></div> -->
             </div>
 
 
-            <div class="main-content-container">
+        </div>
+        <div class="movie-strip"></div>
+
+    </div>
 
 
-                <div class="left-curtain"></div>
+    <div class="main-content-container">
 
-                <div class="main-content">
-                    <div class="flex-title">
-                    <div class="movie-title">
-                        <h1 th:text="${movie.title}">BULLITT</h1>
+
+        <div class="left-curtain"></div>
+
+        <div class="main-content">
+            <div class="flex-title">
+                <div class="movie-title">
+                    <h1 th:text="${movie.title}">BULLITT</h1>
+                </div>
+
+                <div class="media">
+                    <div class="review-poster">
+                        <img th:src="${movie.posterUrl}" alt="Movie poster">
+                        <!-- <img src="https://m.media-amazon.com/images/M/MV5BNWYxNzIxOTEtZWQyNS00OWY3LTgwNmMtMTI1MjI1MTE5OTZkXkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_.jpg"
+                    alt="Bullitt movie poster"> -->
                     </div>
-
-                    <div class="media">
-                        <div class="review-poster">
-                            <img th:src="${movie.posterUrl}" alt="Movie poster">
-                            <!-- <img src="https://m.media-amazon.com/images/M/MV5BNWYxNzIxOTEtZWQyNS00OWY3LTgwNmMtMTI1MjI1MTE5OTZkXkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_.jpg"
-                        alt="Bullitt movie poster"> -->
-                        </div>
-                        <div class="movie-trailer">
-                            <h3>View the official trailer:</h3>
-                            <iframe width="560" height="315" th:src="${movie.trailerUrl}" title="YouTube video player"
+                    <div class="movie-trailer">
+                        <h3>View the official trailer:</h3>
+                        <iframe width="560" height="315" th:src="${movie.trailerUrl}" title="YouTube video player"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
-                            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/BsvD806qNM8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe> -->
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/BsvD806qNM8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="movie-info">
+                <div class="release-date">
+                    <h3>Release Date:</h3>
+                    <h3 th:text="${movie.releaseDate}">Release Date: 1968</h3>
+                </div>
+                <div class="mpaa-rating">
+                    <h3>MPAA Rated:</h3>
+                    <h3 th:text="${movie.mpaaRating}">MPAA Rated: M/PG</h3>
+                </div>
+                <div class="good-date">
+                    <h3>Good Date Movie?</h3>
+                    <div th:switch="${movie.dateMovie}">
+                        <img class="thumb-up-down" th:case="${true}"
+                             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/whatsapp/238/thumbs-up-sign_emoji-modifier-fitzpatrick-type-5_1f44d-1f3fe_1f3fe.png">
+                        <img class="thumb-up-down" th:case="*"
+                             src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/whatsapp/238/thumbs-down-sign_1f44e.png">
+                    </div>
+                    <!-- <h3 th:text="${movie.dateMovie}">Good Date Movie? <img class="thumb-up-down"
+                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/273/thumbs-up_1f44d.png">
+            </h3> -->
+                </div>
+            </div>
+            <br>
+            <br>
+            <p class="movie-text" th:text="${movie.description}">"An all-guts, no-glory San Francisco cop
+                becomes determined to find the
+                underworld kingpin that killed the
+                witness in his protection."</p>
+
+            <div class="star-comment-align">
+                <div class="review-stars img">
+                    <h3 th:switch="${movie.starRating}">Rating:
+                        <img th:case="'1'"
+                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/1_stars.svg/2560px-1_stars.svg.png">
+                        <img th:case="'2'"
+                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/2_stars.svg/1280px-2_stars.svg.png">
+                        <img th:case="'3'"
+                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/3_stars.svg/1280px-3_stars.svg.png">
+                        <img th:case="'4'"
+                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/4_stars.svg/1200px-4_stars.svg.png">
+                        <img th:case="*"
+                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/1200px-5_stars.svg.png">
+                    </h3>
+                </div>
+
+                <div class="comments">
+
+                    <div class="comment-container">
+
+                        <div th:each="comment:${movie.comments}" class="user-comment">
+                            <p th:text="'&quot;' + ${comment.comment} + '&quot;'">This movie was awesome and cool! Would
+                                watch again!</p>
+
+
                         </div>
+
+
                     </div>
 
-                    </div>
-                    <div class="movie-info">
-                        <div class="release-date">
-                            <h3>Release Date:</h3>
-                            <h3 th:text="${movie.releaseDate}">Release Date: 1968</h3>
-                        </div>
-                        <div class="mpaa-rating">
-                            <h3>MPAA Rated:</h3>
-                            <h3 th:text="${movie.mpaaRating}">MPAA Rated: M/PG</h3>
-                        </div>
-                        <div class="good-date">
-                            <h3>Good Date Movie?</h3>
-                            <div th:switch="${movie.dateMovie}">
-                                <img class="thumb-up-down" th:case="${true}"
-                                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/whatsapp/238/thumbs-up-sign_emoji-modifier-fitzpatrick-type-5_1f44d-1f3fe_1f3fe.png">
-                                <img class="thumb-up-down" th:case="*"
-                                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/whatsapp/238/thumbs-down-sign_1f44e.png">
-                            </div>
-                            <!-- <h3 th:text="${movie.dateMovie}">Good Date Movie? <img class="thumb-up-down"
-                            src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/273/thumbs-up_1f44d.png">
-                    </h3> -->
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <p class="movie-text" th:text="${movie.description}">"An all-guts, no-glory San Francisco cop
-                        becomes determined to find the
-                        underworld kingpin that killed the
-                        witness in his protection."</p>
-
-                    <div class="review-stars img">
-                        <h3 th:switch="${movie.starRating}">Rating:
-                            <img th:case="'1'"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/1_stars.svg/2560px-1_stars.svg.png">
-                            <img th:case="'2'"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/2_stars.svg/1280px-2_stars.svg.png">
-                            <img th:case="'3'"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/3_stars.svg/1280px-3_stars.svg.png">
-                            <img th:case="'4'"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/4_stars.svg/1200px-4_stars.svg.png">
-                            <img th:case="*"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/5_stars.svg/1200px-5_stars.svg.png">
-                        </h3>
-                    </div>
-
-                    <div class="comments">
-
-                        <div class="comment-container">
-
-                            <div th:each="comment:${movie.comments}" class="user-comment">
-                                <p th:text="'&quot;' + ${comment.comment} + '&quot;'">This movie was awesome and cool! Would watch again!</p>
-                               
-
-                            </div>
-
-
-                        </div>
-
-                        <div class="comment-form">
+                    <div class="comment-form">
                         <form action="../add-comment/" method="POST">
-                        
+
                             <label for="comment">Enter a new comment:</label>
                             <input type="text" id="comment" name="userComment" placeholder="Comment here...">
-                            <input type="hidden" th:value="${movie.title}" name="title" />
+                            <input type="hidden" th:value="${movie.title}" name="title"/>
 
                             <br>
 
                             <input type="submit" value="Submit">
                         </form>
                     </div>
-                    </div>
-
-
                 </div>
-
-                <div class="right-curtain"></div>
-
-
             </div>
 
-            <div class="hashtag">
-
-                <div class="hashtag-text">
-                <div th:each="hashtag:${movie.getHashtags()}">
-
-                    <h3>
-                        <a th:text="${hashtag.hashName}" th:href="'/hashtags/' + ${hashtag.id}">#CarChase</a>
-                    </h3>
-
-                </div>
-                </div>
-
-                <div class="hashtag-form">
-                <form th:action="'../add-hashtag/' + ${movie.title}" method="POST">
-
-                    <label class="form-text" for="hashtag">Enter a new hashtag:</label>
-                    <input type="text" id="hashtag" name="hashtag" placeholder="#HashTag here...">
-                    <br>
-
-                    <input type="submit" value="Submit">
-                </form>
-                </div>
-
-            </div>
-
-
-            <div class="footer">
-                <div class="movie-strip"></div>
-                <small>3 Thumbs Up Movie Reviews, WCCI 2021</small>
-            </div>
 
         </div>
-    </body>
+
+        <div class="right-curtain"></div>
+
+
+    </div>
+
+    <div class="hashtag-single">
+
+        <div class="hashtag-text">
+            <div th:each="hashtag:${movie.getHashtags()}">
+
+                <h3>
+                    <a class="footer-link" th:text="${hashtag.hashName}" th:href="'/hashtags/' + ${hashtag.id}">#CarChase</a>
+                </h3>
+
+            </div>
+        </div>
+
+        <div class="hashtag-form">
+
+            <form th:action="'../add-hashtag/' + ${movie.title}" method="POST">
+
+                <div class="form-body">
+                    <div>
+                        <label class="form-text" for="hashtag">Enter a new hashtag:</label>
+                    </div>
+
+                    <div>
+                        <input type="text" id="hashtag" name="hashtag" placeholder="#HashTag here...">
+                    </div>
+
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="movie-strip"></div>
+        <small>3 Thumbs Up Movie Reviews, WCCI 2021</small>
+    </div>
+
+</div>
+</body>
 
 </html>
