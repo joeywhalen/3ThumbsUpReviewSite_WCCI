@@ -131,6 +131,10 @@ a.nav-link:active {
 /* -------------------------------------- */
 /* MAIN CONTENT */
 /* -------------------------------------- */
+.flex-title {
+  display: flex;
+  flex-direction: column;
+}
 
 .genre {
   display: flex;
@@ -266,6 +270,9 @@ a.movie-link:hover {
 
 .movie-title {
   display: flex;
+  justify-content: space-around;
+  padding-bottom: 25px;
+  font-size: 30px;
 }
 
 .movie-title h1 {
@@ -277,6 +284,7 @@ a.movie-link:hover {
 .media {
   display: flex;
   align-items: flex-end;
+  justify-content: space-evenly;
 }
 
 .movie-info {
