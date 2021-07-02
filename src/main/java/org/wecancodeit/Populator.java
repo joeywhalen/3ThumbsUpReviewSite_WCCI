@@ -38,8 +38,8 @@ public class Populator implements CommandLineRunner {
         Hashtags hashFive = new Hashtags("#Violent");
         Hashtags hashSix = new Hashtags("#Funny");
 
-        Hashtags hash7 = new Hashtags("#Slapstick");
-        Hashtags hash8 = new Hashtags("#Violent");
+        Hashtags hash7 = new Hashtags("#Wait...What?!");
+        Hashtags hash8 = new Hashtags("#SleepWithTheLightsOn");
         Hashtags hash9 = new Hashtags("#Spooky");
         Hashtags hash10 = new Hashtags("#Boring");
         Hashtags hash11 = new Hashtags("#LoveStory");
@@ -68,7 +68,8 @@ public class Populator implements CommandLineRunner {
                 "An all-guts, no-glory San Francisco cop becomes determined to find the underworld kingpin that killed the\n" +
                         "            witness in his protection.",
                 4,
-                actionGenre,hashOne,hashTwo,hashThree);
+                actionGenre,
+                hashOne,hashFive);
 
         Movie conAir = new Movie("Con Air",
                 "https://images-na.ssl-images-amazon.com/images/I/514F8JgREKL._AC_.jpg",
@@ -79,7 +80,8 @@ public class Populator implements CommandLineRunner {
                 "Newly paroled ex-con and former U.S. Ranger Cameron Poe finds himself trapped in a prisoner transport\n" +
                         "                    plane when the passengers seize control.",
                 4,
-                actionGenre,hashOne,hashTwo,hashThree,hashFour);
+                actionGenre,
+                hashOne,hashTwo,hashThree,hashFive);
 
         Movie dieHard = new Movie("Die Hard",
                 "https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
@@ -90,7 +92,8 @@ public class Populator implements CommandLineRunner {
                 "An NYPD officer tries to save his wife and several others taken hostage by German terrorists during a\n" +
                         "                    Christmas party at the Nakatomi Plaza in Los Angeles.",
                 5,
-                actionGenre,hashFive,hashSix);
+                actionGenre,
+                hashFive,hashSix);
 
         Movie frenchConnection = new Movie("The French Connection",
                 "https://cdn.shopify.com/s/files/1/1416/8662/products/french_connection_1971_linen_original_film_art_f_1200x.jpg?v=1582765548",
@@ -101,7 +104,8 @@ public class Populator implements CommandLineRunner {
                 "A pair of NYC cops in the Narcotics Bureau stumble onto a drug smuggling job with a French\n" +
                         "                     connection.",
                 4,
-                actionGenre,hashTwo,hashFour,hashSix);
+                actionGenre,
+                hashOne,hashFive);
 
         Movie pointBreak = new Movie("Point Break",
                 "https://images-na.ssl-images-amazon.com/images/I/815GLk-ggYL._AC_SL1500_.jpg",
@@ -111,7 +115,8 @@ public class Populator implements CommandLineRunner {
                 true,
                 "An F.B.I. Agent goes undercover to catch a gang of surfers who may be bank robbers.",
                 4,
-                actionGenre,hashThree,hashFive,hashSix);
+                actionGenre,
+                hashTwo,hashThree,hashFive);
 
         Movie speed = new Movie("Speed",
                 "https://cdn.shopify.com/s/files/1/0013/2874/2466/products/speed-get-ready-for-rush-hour-keanu-reeves-1994-vintage-movie-promo-poster-27-x-39-620_705x.jpg?v=1616623980",
@@ -121,7 +126,8 @@ public class Populator implements CommandLineRunner {
                 true,
                 "A young police officer must prevent a bomb exploding aboard a city bus by keeping its speed above 50 mph.",
                 4,
-                actionGenre);
+                actionGenre,
+                hashTwo,hashFive);
 
 
         Movie animalHouse = new Movie("Animal House",
