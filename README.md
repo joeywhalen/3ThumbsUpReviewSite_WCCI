@@ -1,5 +1,9 @@
 # Reviews Site
 
+## Interact with the application here:
+https://dazzling-mesa-verde-96495.herokuapp.com/genres
+Please allow about 30 seconds for the HEROKU platform to launch the application. 🎶Do-do-do-do🎶
+
 ## Module 3 Group Project
 
 ### Goals
